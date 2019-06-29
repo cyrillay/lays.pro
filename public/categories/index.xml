@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Cyril Lay</title>
+    <link>http://www.lays.pro/categories/</link>
+    <description>Recent content in Categories on Cyril Lay</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Oct 2015 13:07:31 +0200</lastBuildDate>
+    
+	<atom:link href="http://www.lays.pro/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Lorem</title>
+      <link>http://www.lays.pro/categories/lorem/</link>
+      <pubDate>Sat, 10 Oct 2015 13:07:31 +0200</pubDate>
+      
+      <guid>http://www.lays.pro/categories/lorem/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ipsum</title>
+      <link>http://www.lays.pro/categories/ipsum/</link>
+      <pubDate>Thu, 17 Sep 2015 13:47:08 +0200</pubDate>
+      
+      <guid>http://www.lays.pro/categories/ipsum/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
