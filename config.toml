@@ -12,13 +12,13 @@ paginate = 10
 	# To provide some metadata for search engines feel free to add a few
     # information about you and your website.
 	name = "Cyril Lay"
-	description = "Ceci est mon blog de la moula made in LA"
+	description = "Personal blog about various fields of computer science"
 
 	# Format dates with Go's time formatting
 	date_format = "2006-01-02"
 
 	# Add read time estimates in the format "X min read"
-	show_read_time = false
+	show_read_time = true
 
 	# Add custom assets with their paths relative to the static folder
 	custom_js   = []
@@ -27,21 +27,21 @@ paginate = 10
 
 	[params.sidebar]
 		# Replace the avatar with a picture of your own under static/images
-		avatar = "MOULA.jpg"
+		avatar = "Cyril-Yosemite.jpg"
 		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**I'm Cyril Lay**, a super moula made in LA."
+		bio = "I'm **Cyril Lay**, a software engineer based in Los Angeles, California."
 		# The icons will be shown if you enter your username
-		twitter = "spf13"
-		github = "spf13"
-		gitlab = "spf13"
+		twitter = ""
+		github = "cyrillay"
+		gitlab = ""
 		dribbble = ""
 		facebook = ""
 		googleplus = ""
 		flickr = ""
-		linkedin = ""
+		linkedin = "cyril-lay-2017"
 
 		copyright = [
-			"&copy; John Doe",
+			"&copy; Cyril Lay",
 			"Design: [HTML5 UP](//html5up.net)",
 			"Demo Images: [Unsplash](//unsplash.com/)"
 		]
@@ -49,12 +49,12 @@ paginate = 10
 
 	[params.about]
 		hide  = false
-		title = "Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque."
-		content = "Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae lobortis tortor primis integer massa adipiscing id nisi accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque cubilia."
+		title = "Welcome to Lay's portal !"
+		content = "You will find different articles, links and projects about various fields of computer science, especially data science, data engineering and infrastructure."
 
 
 	[params.portfolio]
-		hide  = false
+		hide  = true
 		title = "Recent Work"
 
 		# The images and thumbnails are stored under static/images
