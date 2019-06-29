@@ -102,7 +102,7 @@ paginate = 10
 	[params.contact]
 		hide  = false
 		title = "Get In Touch"
-		content = "/!\ Currently disabled /!\ Please contact me using the form below for any enquiry."
+		content = "! Currently disabled ! Please contact me using the form below for any enquiry."
 
 		# This can be exact coordinates or a searchable address in google maps
 		gmaps_address = "39.7889055,-120.5443524"
