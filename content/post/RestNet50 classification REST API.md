@@ -12,6 +12,8 @@ title = "Resnet50 classification REST API"
 I built a simple inference API backed by the famous pretrained CNN model [ResNet50](https://www.mathworks.com/help/deeplearning/ref/resnet50.html). The network is 50 layers deep and can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
 Currently, the API is running on the same machine hosting this website : a simple t2.micro on AWS EC2.
 
+I am currently working on a front-end UI, which is already available at <http://datascience.lays.pro>.
+
 ## Usage
 
 Download an image, and submit it with :
@@ -39,6 +41,11 @@ This means that the image you sent was classified as an Indian Elephant by ResNe
 ## Roadmap
 
 - Support for batch predictions
+- Support for sending a URL
 - New endpoints for different models : threat classification, edge detection...
 - Front-end UI
 - Dockerize the app and automate the deployment of new models
+
+## Updates
+- 07/13 : Swapped Resnet50 with Inception V3
+- 07/09 : Added CI/CD for the front-end
