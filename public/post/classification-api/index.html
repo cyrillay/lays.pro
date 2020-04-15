@@ -17,7 +17,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		
 		<meta name="og:site_name" content="Cyril Lay">
 		<meta name="og:title" content="Resnet50 classification REST API">
-		<meta name="og:url" content="http://www.lays.pro/post/restnet50-classification-rest-api/">
+		<meta name="og:url" content="http://www.lays.pro/post/classification-api/">
 		
 		<meta name="og:image" content="http://www.lays.pro/images/Cyril-Yosemite.jpg">
 		
@@ -70,15 +70,6 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 1 min read&nbsp;&nbsp;
 
 
-    
-    
-        <i class="fa fa-folder"></i>&nbsp;&nbsp;
-        
-        <a class="article-category-link" href="http://www.lays.pro/categories/lorem">Lorem</a>
-        
-        
-    
-
 
 
    
@@ -90,31 +81,35 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 	<p>
 	    <h2 id="introduction">Introduction</h2>
 <p>I built a simple inference API backed by the famous pretrained CNN model <a href="https://www.mathworks.com/help/deeplearning/ref/resnet50.html">ResNet50</a>. The network is 50 layers deep and can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals.
-Currently, the API is running on the same machine hosting this website : a simple t2.micro on AWS EC2.</p>
-<p>I am currently working on a front-end UI, which is already available at <a href="http://datascience.lays.pro">http://datascience.lays.pro</a>.</p>
-<h2 id="usage">Usage</h2>
+Currently, the API is running on the same machine hosting this website : a simple t2.micro on AWS EC2. It is available at <a href="http://datascience.lays.pro">http://datascience.lays.pro</a>.</p>
+<h2 id="ui">UI</h2>
+<figure>
+    <img src="/images/inference-api-screenshot.png" width="100%"/> 
+</figure>
+
+<h2 id="architecture">Architecture</h2>
+<figure>
+    <img src="/images/architecture.png" width="100%"/> 
+</figure>
+
+<h2 id="command-line-usage">Command line usage</h2>
 <p>Download an image, and submit it with :</p>
 <p><code>$ curl -X POST -F image=@IMAGE_NAME.jpg 'http://lays.pro:5000/predict'</code></p>
 <p>You should receive a JSON response with the following structure :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">$ curl -X POST -F image<span style="color:#f92672">=</span>@image.jpg <span style="color:#e6db74">&#39;http://lays.pro:5000/predict&#39;</span>
-
-$ <span style="color:#f92672">{</span>
-	<span style="color:#e6db74">&#34;predictions&#34;</span>:<span style="color:#f92672">[</span>
-		<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;label&#34;</span>:<span style="color:#e6db74">&#34;Indian_elephant&#34;</span>,<span style="color:#e6db74">&#34;probability&#34;</span>:0.7532103657722473<span style="color:#f92672">}</span>,
-		<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;label&#34;</span>:<span style="color:#e6db74">&#34;tusker&#34;</span>,<span style="color:#e6db74">&#34;probability&#34;</span>:0.12444225698709488<span style="color:#f92672">}</span>,
-		<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;label&#34;</span>:<span style="color:#e6db74">&#34;African_elephant&#34;</span>,<span style="color:#e6db74">&#34;probability&#34;</span>:0.12229373306035995<span style="color:#f92672">}</span>,
-		<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;label&#34;</span>:<span style="color:#e6db74">&#34;water_buffalo&#34;</span>,<span style="color:#e6db74">&#34;probability&#34;</span>:2.685574690985959e-05<span style="color:#f92672">}</span>,
-		<span style="color:#f92672">{</span><span style="color:#e6db74">&#34;label&#34;</span>:<span style="color:#e6db74">&#34;Chesapeake_Bay_retriever&#34;</span>,<span style="color:#e6db74">&#34;probability&#34;</span>:7.5970979196426924e-06<span style="color:#f92672">}</span>
-	<span style="color:#f92672">]</span>,
-	<span style="color:#e6db74">&#34;success&#34;</span>:true
-<span style="color:#f92672">}</span>
-</code></pre></div><p>This means that the image you sent was classified as an Indian Elephant by ResNet50, with a probability score of 75%.</p>
+<pre><code>{
+	&quot;predictions&quot;:[
+		{&quot;label&quot;:&quot;Indian_elephant&quot;,&quot;probability&quot;:0.7532103657722473},
+		{&quot;label&quot;:&quot;tusker&quot;,&quot;probability&quot;:0.12444225698709488},
+		{&quot;label&quot;:&quot;African_elephant&quot;,&quot;probability&quot;:0.12229373306035995},
+		{&quot;label&quot;:&quot;water_buffalo&quot;,&quot;probability&quot;:2.685574690985959e-05},
+		{&quot;label&quot;:&quot;Chesapeake_Bay_retriever&quot;,&quot;probability&quot;:7.5970979196426924e-06}
+	],
+	&quot;success&quot;:true
+}
+</code></pre><p>This means that the image you sent was classified as an Indian Elephant by ResNet50, with a probability score of 75%.</p>
 <h2 id="roadmap">Roadmap</h2>
 <ul>
-<li>Support for batch predictions</li>
-<li>Support for sending a URL</li>
 <li>New endpoints for different models : threat classification, edge detection&hellip;</li>
-<li>Front-end UI</li>
 <li>Dockerize the app and automate the deployment of new models</li>
 </ul>
 <h2 id="updates">Updates</h2>

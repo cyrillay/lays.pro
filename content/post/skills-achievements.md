@@ -4,8 +4,6 @@ date: 2020-04-14T13:15:43+02:00
 draft: false
 ---
 
-## Skills and random achievements
-----
 
 To give you an overview of what I can accomplish, here are a few examples of projects and missions I completed over the course of my carreer.
 

@@ -49,7 +49,7 @@ paginate = 10
 	[params.about]
 		hide  = false
 		title = "Welcome to my website."
-		content = "I am a freelance developer, with experience in data science, data engineering and ML engineering. I can help you build AI applications, by transforming your data to extract its  business value, and automate this process in a reliable and cost-efficient way."
+		content = "I am a freelance developer, with experience in data science, data engineering and ML engineering. I can help you build AI applications, by transforming your data to extract its business value, and automate this process in a reliable and cost-efficient way."
 
 
 	[params.portfolio]
@@ -59,13 +59,25 @@ paginate = 10
 		# The images and thumbnails are stored under static/images
 		# Create and change subfolders as you like
 		[[params.portfolio.gallery]]
-			image = "inference-app-screenshot.png"
-			thumb = "thumbs/inference-app-screenshot.png"
-			title = "[Image classifier](//datascience.lays.pro)"
-			description = "Simple React application connected to my inference REST API. Available at http://datascience.lays.pro"
+			title = "[Bot detection system](/post/bot-detection)"
+			description = "A module for detecting bots from web traffic. [Read more ...](/post/bot-detection)"
+
+		[[params.portfolio.gallery]]
+			#image = "inference-app-screenshot.png"
+			#thumb = "thumbs/inference-app-screenshot.png"
+			title = "[Image classifier](/post/classification-api)"
+			description = "Simple React UI connected to an inference REST API. [Read more ...](/post/classification-api)"
+
+		[[params.portfolio.gallery]]
+			title = "[Deep Fake Detection Challenge (Computer vision on videos)](/post/dfdc-challenge-kaggle)"
+			description = "A step by step guide on how I proceeded during this kaggle competition. [Read more...](/post/dfdc-challenge-kaggle)"
+
+		[[params.portfolio.gallery]]
+			title = "[Plant Pathology 2020 Detection Challenge (Kaggle, multi-class image classification)](/post/plant-pathology-challenge-kaggle)"
+			description = "A step by step guide on how I proceeded during this kaggle competition. [Read more...](/post/plant-pathology-challenge-kaggle)"
 
 	[params.recentposts]
-		hide  = false
+		hide  = true
 		title = "Recent blog posts"
 
 	[params.contact]
