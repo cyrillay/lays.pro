@@ -1,8 +1,11 @@
 ---
 title: "Deep Fake Detection Challenge (DFDC) on Kaggle"
 date: 2020-04-15T03:08:59+02:00
-draft: true
+draft: false
 ---
+
+
+## [DRAFT - WORK IN PROGRESS]
 
 * Deep fake context, GAN, dataset size challenge etc
 * processing the videos

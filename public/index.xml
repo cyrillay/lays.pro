@@ -6,10 +6,28 @@
     <description>Recent content on Cyril Lay</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 15 Apr 2020 00:30:03 +0200</lastBuildDate>
+    <lastBuildDate>Wed, 15 Apr 2020 03:08:59 +0200</lastBuildDate>
     
 	<atom:link href="http://www.lays.pro/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Deep Fake Detection Challenge (DFDC) on Kaggle</title>
+      <link>http://www.lays.pro/post/dfdc-challenge-kaggle/</link>
+      <pubDate>Wed, 15 Apr 2020 03:08:59 +0200</pubDate>
+      
+      <guid>http://www.lays.pro/post/dfdc-challenge-kaggle/</guid>
+      <description>[DRAFT - WORK IN PROGRESS]  Deep fake context, GAN, dataset size challenge etc processing the videos Frame extraction Face recognition ResNext50 training Inference pipeline : video -&amp;gt; frames -&amp;gt; faces -&amp;gt; prediction over each face/frame -&amp;gt; average -&amp;gt; output  </description>
+    </item>
+    
+    <item>
+      <title>Plant Pathology Challenge Kaggle</title>
+      <link>http://www.lays.pro/post/plant-pathology-challenge-kaggle/</link>
+      <pubDate>Wed, 15 Apr 2020 02:27:15 +0200</pubDate>
+      
+      <guid>http://www.lays.pro/post/plant-pathology-challenge-kaggle/</guid>
+      <description>[DRAFT - WORK IN PROGRESS]  Exploratory data analysis Image augmentations Efficientnet training + decreasing LR  </description>
+    </item>
     
     <item>
       <title>Bot detection POC</title>
@@ -17,7 +35,7 @@
       <pubDate>Wed, 15 Apr 2020 00:30:03 +0200</pubDate>
       
       <guid>http://www.lays.pro/post/bot-detection/</guid>
-      <description>The goal of this project was to create a POC for a bot detection system, by using a data file containing all HTTP requests to a server. As an example, we&amp;rsquo;ll use logs from the website http://www.almhuette-raith.at.
+      <description>[DRAFT - WORK IN PROGRESS] The goal of this project was to create a POC for a bot detection system, by using a data file containing all HTTP requests to a server. As an example, we&amp;rsquo;ll use logs from the website http://www.almhuette-raith.at.
 In order to identify the traffic coming from bots, we will analyse the sessions from individual IP adresses. In other words, for each IP adress, we will consider their sequences of HTTP requests during a specific timeframe.</description>
     </item>
     

@@ -7,7 +7,7 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 -->
 <html>
 	<head>
-		<title>Bot detection POC &middot; Cyril Lay</title>
+		<title>Deep Fake Detection Challenge (DFDC) on Kaggle &middot; Cyril Lay</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="author" content="Cyril Lay">
@@ -16,8 +16,8 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 		
 		<meta name="og:site_name" content="Cyril Lay">
-		<meta name="og:title" content="Bot detection POC">
-		<meta name="og:url" content="http://www.lays.pro/post/bot-detection/">
+		<meta name="og:title" content="Deep Fake Detection Challenge (DFDC) on Kaggle">
+		<meta name="og:url" content="http://www.lays.pro/post/dfdc-challenge-kaggle/">
 		
 		<meta name="og:image" content="http://www.lays.pro/images/Cyril-Yosemite.jpg">
 		
@@ -62,12 +62,12 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 		<div id="main">
 			
 	<span>
-		<h1>Bot detection POC</h1>
+		<h1>Deep Fake Detection Challenge (DFDC) on Kaggle</h1>
 
 		<i class="fa fa-calendar"></i>&nbsp;&nbsp;
-<time datetime="2020-04-15 00:30:03 &#43;0200 CEST">2020-04-15</time>&nbsp;&nbsp;
+<time datetime="2020-04-15 03:08:59 &#43;0200 CEST">2020-04-15</time>&nbsp;&nbsp;
 
-2 min read&nbsp;&nbsp;
+1 min read&nbsp;&nbsp;
 
 
 
@@ -77,27 +77,14 @@ Free for personal and commercial use under the CCA 3.0 license (html5up.net/lice
 
 	<p>
 	    <h2 id="draft---work-in-progress">[DRAFT - WORK IN PROGRESS]</h2>
-<p>The goal of this project was to create a POC for a bot detection system, by using a data file containing all HTTP requests to a server.
-As an example, we&rsquo;ll use logs from the website <a href="http://www.almhuette-raith.at">http://www.almhuette-raith.at</a>.</p>
-<p>In order to identify the traffic coming from bots, we will analyse the sessions from individual IP adresses. In other words, for each IP adress, we will consider their sequences of HTTP requests during a specific timeframe.</p>
-<h1 id="summary">Summary</h1>
 <ul>
-<li>what features we have in the base dataset</li>
-<li>what features we will generate for each session (mean time between requests, mean time between sessions, number of requests during the session, proportion of GET requests vs POST requests&hellip;</li>
-<li>How we are going to read the data and parse it (attention to file size)</li>
-<li>a few plots, outliers examination, etc</li>
-<li>next steps</li>
-<li>Add credits, sources</li>
+<li>Deep fake context, GAN, dataset size challenge etc</li>
+<li>processing the videos</li>
+<li>Frame extraction</li>
+<li>Face recognition</li>
+<li>ResNext50 training</li>
+<li>Inference pipeline : video -&gt; frames -&gt; faces -&gt; prediction over each face/frame -&gt; average -&gt; output</li>
 </ul>
-<p>En données d’entrée, nous avons un fichier <code>access.log</code>, historique complet de toutes les requêtes HTTP vers le serveur de <a href="http://www.almhuette-raith.at">http://www.almhuette-raith.at</a>. Il est important de noter que ce fichier est assez gros (presque 1go), car il semblerait qu’il contient toutes les requêtes depuis décembre 2015. Dans le futur, ou dans le cas d’un autre site plus fréquenté, cela pourrait poser des soucis de scaling, car la taille du fichier ne va cesser d’augmenter, de l’ordre de 1 Mo par 10 000 requêtes.</p>
-<p>This dataset is filtered to only keep the traffic coming from bots, using 7 detection rules :
-Presence of a request to the ‘robots.txt’ file
-A bot name in the user agent (Googlebot, AdsBot-Google, BingBot…).
-The mean time spent per page is below 0.5 seconds
-The referrer is empty for the first request of the session, all the page requests or even all the HTTP requests of the session
-All requests are HEAD instead of the more common GET
-The image to page ratio requests is zero
-Only one request in the session</p>
 
 	</p>
 
