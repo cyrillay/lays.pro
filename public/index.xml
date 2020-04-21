@@ -26,7 +26,8 @@
       <pubDate>Wed, 15 Apr 2020 02:27:15 +0200</pubDate>
       
       <guid>http://www.lays.pro/post/plant-pathology-challenge-kaggle/</guid>
-      <description>[DRAFT - WORK IN PROGRESS]  Exploratory data analysis Image augmentations Efficientnet training + decreasing LR  </description>
+      <description>[DRAFT - WORK IN PROGRESS] In this kaggle competition, we will learn how to train a convolutional neural network (CNN) for multi label classification.
+Problem statement Misdiagnosis of the many diseases impacting agricultural crops can lead to misuse of chemicals leading to the emergence of resistant pathogen strains, increased input costs, and more outbreaks with significant economic loss and environmental impacts. Current disease diagnosis based on human scouting is time-consuming and expensive, and although computer-vision based models have the promise to increase efficiency, the great variance in symptoms due to age of infected tissues, genetic variations, and light conditions within trees decreases the accuracy of detection.</description>
     </item>
     
     <item>
@@ -35,8 +36,7 @@
       <pubDate>Wed, 15 Apr 2020 00:30:03 +0200</pubDate>
       
       <guid>http://www.lays.pro/post/bot-detection/</guid>
-      <description>[DRAFT - WORK IN PROGRESS] The goal of this project was to create a POC for a bot detection system, by using a data file containing all HTTP requests to a server. As an example, we&amp;rsquo;ll use logs from the website http://www.almhuette-raith.at.
-In order to identify the traffic coming from bots, we will analyse the sessions from individual IP adresses. In other words, for each IP adress, we will consider their sequences of HTTP requests during a specific timeframe.</description>
+      <description>[DRAFT - WORK IN PROGRESS] Introduction The goal of this project was to create a POC for a bot detection system, by using a data file containing all HTTP requests to a server. I started by browsing and skimming through a few technical and scientific papers and resources to gather knowledge on how bot detection is done when applied to HTTP logs, those resources will be linked at the bottom of this article.</description>
     </item>
     
     <item>
