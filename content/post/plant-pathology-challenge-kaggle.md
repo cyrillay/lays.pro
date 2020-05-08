@@ -27,5 +27,6 @@ Objectives of ‘Plant Pathology Challenge’ are to train a model using images 
 * Exploratory data analysis
 * Image augmentations
 * Efficientnet training + decreasing LR
+* Same for inceptionresnetv3 then average
 
 <iframe src="/custom_html/fig1_tpu.html" width="100%" height="600"></iframe>
