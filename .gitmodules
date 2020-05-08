@@ -1,0 +1,3 @@
+[submodule "lays.pro-onedly/themes/onedly"]
+	path = lays.pro-onedly/themes/onedly
+	url = https://github.com/cdeck3r/OneDly-Theme.git

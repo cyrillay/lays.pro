@@ -1,125 +1,64 @@
-baseurl = "http://www.lays.pro/"
+baseURL = "http://www.lays.pro/"
 languageCode = "en-us"
 title = "Cyril Lay"
-theme = "hugo-strata-theme"
-disqusShortname = "Cyril"
-# Enable Google Analytics by inserting your tracking code
-googleAnalytics = ""
-# Define how many posts should appear on a site
-paginate = 10
 
-[markup.goldmark.renderer]
-	unsafe = true
-
+#
+# Personalization params
+#
 [params]
-	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
-	name = "Cyril Lay"
-	description = "Personal freelance website."
+    # project specific params
+    description = "Machine Learning Engineer - Contractor"
+    author_url = "/blog/blog-summary"
+    author_name = "Blog"
+    project_url = "//github.com/cyrillay"
 
-	# Format dates with Go's time formatting
-	date_format = "2006-01-02"
+    # optionally specify where the content is
+    mainSections = ["post"]
 
-	# Add read time estimates in the format "X min read"
-	show_read_time = true
+    # social share links to appear at the end
+    socialShare = true
+    # Sets specific share to appear on posts (default behavior is to appear)
+    socialShareTwitter = true
+    socialShareGoogleplus = false
+    socialShareFacebook = true
+    socialShareReddit = false
+    socialShareLinkedin = true
+    socialShareStumbleupon = false
+    socialSharePinterest = false
+    socialShareEmail = true
 
-	# Add custom assets with their paths relative to the static folder
-	custom_js   = []
-	custom_css  = []
+    # theme's color scheme
+    first_color="#f8f8f8"
+    first_border_color="#e7e7e7"
+    first_text_color="#333"
 
+    second_color="white"
+    second_text_color="#333"
 
-	[params.sidebar]
-		# Replace the avatar with a picture of your own under static/images
-		avatar = "Cyril-Yosemite.jpg"
-		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**Cyril Lay** - Machine Learning Engineer"
-		# The icons will be shown if you enter your username
-		twitter = ""
-		github = "cyrillay"
-		gitlab = ""
-		dribbble = ""
-		facebook = ""
-		googleplus = ""
-		flickr = ""
-		linkedin = "cyril-lay-2017"
+    header_color="#f8f8f8"
+    header_text_color="rgb(51, 51, 51)"
 
-		copyright = [
-			"&copy; Cyril Lay",
-			"Design: [HTML5 UP](//html5up.net)"
-		]
-
-
-	[params.about]
-		hide  = false
-		title = "Welcome to my website."
-		content = "I am a freelance developer, with experience in data science, data engineering and ML engineering. I can help you build AI applications, by transforming your data to extract its business value, and automate this process in a reliable and cost-efficient way."
+    header_link_color="#777"
+    header_link_hover_color="rgb(51, 51, 51)"
 
 
-	[params.portfolio]
-		hide  = false
-		title = "My projects"
+[social]
+    # Coding Communities
+    github           = "cyrillay"
+    # Publishing Communities
+    linkedin         = ""
+    # Email
+    email = "cyril@lays.pro"
 
-		# The images and thumbnails are stored under static/images
-		# Create and change subfolders as you like
-		[[params.portfolio.gallery]]
-			title = "[Bot detection system](/post/bot-detection)"
-			description = "A module for detecting bots from web traffic. [Read more ...](/post/bot-detection)"
+# Adjust privacy settings
+# See: https://gohugo.io/about/hugo-and-gdpr/
 
-		[[params.portfolio.gallery]]
-			#image = "inference-app-screenshot.png"
-			#thumb = "thumbs/inference-app-screenshot.png"
-			title = "[Image classifier](/post/classification-api)"
-			description = "Simple React UI connected to an inference REST API. [Read more ...](/post/classification-api)"
+[privacy]
+    [privacy.disqus]
+      disable = true
 
-		[[params.portfolio.gallery]]
-			title = "[Deep Fake Detection Challenge (Computer vision on videos)](/post/dfdc-challenge-kaggle)"
-			description = "A step by step guide on how I proceeded during this kaggle competition. [Read more...](/post/dfdc-challenge-kaggle)"
-
-		[[params.portfolio.gallery]]
-			title = "[Plant Pathology 2020 Detection Challenge (Kaggle, multi-class image classification)](/post/plant-pathology-challenge-kaggle)"
-			description = "A step by step guide on how I proceeded during this kaggle competition. [Read more...](/post/plant-pathology-challenge-kaggle)"
-
-	[params.recentposts]
-		hide  = true
-		title = "Recent blog posts"
-
-	[params.contact]
-		hide  = false
-		title = "Get In Touch"
-		content = "Please contact me using the form below for any enquiry."
-
-		# This can be exact coordinates or a searchable address in google maps
-		#gmaps_address = "39.7889055,-120.5443524"
-		address = ["Paris, France"]
-			# phone = "310-404-****"
-
-		# Since this template is static, the contact form uses www.formspree.io as a
-		# proxy. The form makes a POST request to their servers to send the actual
-		# email. Visitors can send up to a 1000 emails each month for free.
-	    #
-	    # What you need to do for the setup?
-	    #
-	    # - set your email address under 'email' below
-	    # - upload the generated site to your server
-	    # - send a dummy email yourself to confirm your account
-	    # - click the confirm link in the email from www.formspree.io
-	    # - you're done. Happy mailing!
-		email = "cyril.lay.pro@gmail.com"
-
-		[params.contact.form]
-			name = "Name"
-			email = "Email"
-			message = "Message"
-			submit = "Send message"
-
-
-# Menu links that appear on the left sidebar
-[[menu.main]]
-	name = "Home"
-	url  = "/"
-	weight = 10
-
-[[menu.main]]
-	name = "Skills & achievements"
-	url  = "post/skills-achievements"
-	weight = 0
+    [privacy.googleAnalytics]
+      disable = true
+      anonymizeIP = true
+      respectDoNotTrack = true
+      useSessionStorage = true

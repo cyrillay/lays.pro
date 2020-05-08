@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs on Cyril Lay</title>
+    <link>http://www.lays.pro/blog/</link>
+    <description>Recent content in Blogs on Cyril Lay</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 May 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://www.lays.pro/blog/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Blog posts</title>
+      <link>http://www.lays.pro/blog/blog-summary/</link>
+      <pubDate>Fri, 08 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.lays.pro/blog/blog-summary/</guid>
+      <description> Detecting bot traffic on a webserver Building an image classification inference API in 30 minutes with deep learning Deep Fake Detection Challenge (DFDC) on Kaggle Plant Pathology Challenge Kaggle  </description>
+    </item>
+    
+    <item>
+      <title>Deep Fake Detection Challenge (DFDC) on Kaggle</title>
+      <link>http://www.lays.pro/blog/dfdc-challenge-kaggle/</link>
+      <pubDate>Wed, 15 Apr 2020 03:08:59 +0200</pubDate>
+      
+      <guid>http://www.lays.pro/blog/dfdc-challenge-kaggle/</guid>
+      <description>[DRAFT - WORK IN PROGRESS]  Deep fake context, GAN, dataset size challenge etc processing the videos Frame extraction Face recognition ResNext50 training Inference pipeline : video -&amp;gt; frames -&amp;gt; faces -&amp;gt; prediction over each face/frame -&amp;gt; average -&amp;gt; output  </description>
+    </item>
+    
+    <item>
+      <title>Plant Pathology Challenge Kaggle</title>
+      <link>http://www.lays.pro/blog/plant-kaggle/</link>
+      <pubDate>Wed, 15 Apr 2020 02:27:15 +0200</pubDate>
+      
+      <guid>http://www.lays.pro/blog/plant-kaggle/</guid>
+      <description>[DRAFT - WORK IN PROGRESS] In this kaggle competition, we will learn how to train a convolutional neural network (CNN) for multi label classification.
+Problem statement Misdiagnosis of the many diseases impacting agricultural crops can lead to misuse of chemicals leading to the emergence of resistant pathogen strains, increased input costs, and more outbreaks with significant economic loss and environmental impacts. Current disease diagnosis based on human scouting is time-consuming and expensive, and although computer-vision based models have the promise to increase efficiency, the great variance in symptoms due to age of infected tissues, genetic variations, and light conditions within trees decreases the accuracy of detection.</description>
+    </item>
+    
+    <item>
+      <title>Detecting bot traffic on a webserver</title>
+      <link>http://www.lays.pro/blog/bot-detection/</link>
+      <pubDate>Wed, 07 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.lays.pro/blog/bot-detection/</guid>
+      <description>This article is still a draft.
+Introduction The goal of this project was to create a POC for a bot detection system, by using a data file containing all HTTP requests to a server. I started by browsing and skimming through a few technical and scientific papers and resources to gather knowledge on how bot detection is done when applied to HTTP logs, those resources will be linked at the bottom of this article.</description>
+    </item>
+    
+    <item>
+      <title>Building an image classification inference API in 30 minutes with deep learning</title>
+      <link>http://www.lays.pro/blog/inference-api/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.lays.pro/blog/inference-api/</guid>
+      <description>Introduction I built a simple inference API backed by the famous pretrained CNN model ResNet50. The network is 50 layers deep and can classify images into 1000 object categories, such as keyboard, mouse, pencil, and many animals. Currently, the API is running on the same machine hosting this website : a simple t2.micro on AWS EC2. It is available at http://datascience.lays.pro.
+UI   Architecture   Command line usage Download an image, and submit it with :</description>
+    </item>
+    
+  </channel>
+</rss>
