@@ -8,5 +8,5 @@ sec = 1
 
 - [Detecting bot traffic on a webserver](/blog/bot-detection)
 - [Building an image classification inference API in 30 minutes with deep learning](/blog/inference-api)
-- [Deep Fake Detection Challenge (DFDC) on Kaggle](/blog/dfdc-challenge-kaggle)
-- [Plant Pathology Challenge Kaggle](/blog/plant-kaggle)
+- [Deep Fake Detection Challenge (DFDC) on Kaggle (draft)](/blog/dfdc-challenge-kaggle)
+- [Plant Pathology Challenge Kaggle (draft)](/blog/plant-kaggle)

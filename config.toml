@@ -10,7 +10,7 @@ title = "Cyril Lay"
     description = "Machine Learning Engineer - Contractor"
     author_url = "/blog/blog-summary"
     author_name = "Blog"
-    project_url = "//github.com/cyrillay"
+    project_url = ""
 
     # optionally specify where the content is
     mainSections = ["post"]
