@@ -16,7 +16,7 @@ sec = 7
 
 ## Latest work
 
-- Fixing and deploying a chabot marketplace on IBMCloud Foundry ([The Conversation Consultancy](http://theconversationconsultancy.com/))
+- Fixing and deploying a chatbot marketplace on IBMCloud Foundry ([The Conversation Consultancy](http://theconversationconsultancy.com/))
 - Built internal big data pipelines for business intelligence ([MyTraffic](https://www.mytraffic.io/))
 - Helped in developing a high-scale ad trafic forecasting tool ([Gumgum Inc.](https://gumgum.com/))
 - Deployed monitoring and management tools for a group of Kafka clusters ([Gumgum Inc.](https://gumgum.com/))
