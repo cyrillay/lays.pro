@@ -1,125 +1,89 @@
-baseurl = "http://www.lays.pro/"
+theme = "hugo-now-ui"
+baseurl = "hugo-now-ui"
 languageCode = "en-us"
-title = "Cyril Lay"
-theme = "hugo-strata-theme"
-disqusShortname = "Cyril"
-# Enable Google Analytics by inserting your tracking code
+title = "Lays.pro"
 googleAnalytics = ""
-# Define how many posts should appear on a site
-paginate = 10
+disqusShortname = ""
+ignoreFiles = ["\\.Rmd$", "_files$", "_cache$"]
+#enableGitInfo = true
+publishDir = "../docs"
+themesDir = "../.."
 
-[markup.goldmark.renderer]
-	unsafe = true
+[permalinks]
+    post = "/:year/:month/:day/:slug/"
+
+[[menu.main]]
+    name = "Components"
+    url = "/components/"
+    pre = "<i class='now-ui-icons design_app'></i>"
+    weight = 1
+[[menu.main]]
+    name = "Landing"
+    url = "/landing/"
+    pre = "<i class='now-ui-icons business_bank'></i>"
+    weight = 1
+[[menu.main]]
+    name = "Profile"
+    url = "/profile/"
+    pre = "<i class='now-ui-icons users_single-02'></i>"
+    weight = 2
+[[menu.main]]
+    name = "Signup"
+    pre = "<i class='now-ui-icons clothes_tie-bow'></i>"
+    url = "/login/"
+    weight = 3
+[[menu.main]]
+    name = "Dropdown"
+    pre = "<i class='now-ui-icons ui-1_settings-gear-63'></i>"
+    url = "#"
+    weight = 4
+    identifier = "dropdown"
+[[menu.main]]
+    name = "Template"
+    pre = "<i class='now-ui-icons files_paper'></i>"
+    url = "/template/"
+    weight = 1
+    parent = "dropdown"
+[[menu.main]]
+    name = "Posts"
+    pre = "<i class='now-ui-icons ui-1_calendar-60'></i>"
+    url = "/post/"
+    weight = 2
+    parent = "dropdown"
+[[menu.main]]
+    name = "Tags"
+    pre = "<i class='now-ui-icons shopping_tag-content'></i>"
+    url = "/tags/"
+    weight = 2
+    parent = "dropdown"    
+
+[[menu.footer]]
+    identifier = "github"
+    pre = "<i class='fa fa-github'></i>"
+    url = "https://github.com/cyrillay"
+    weight = 2
+[[menu.footer]]
+    identifier = "copyright"
+    name = "MIT"
+    pre = "<i class='fa fa-balance-scale'></i>"
+    url = "https://spdx.org/licenses/MIT"
+    weight = 3
+
 
 [params]
-	# To provide some metadata for search engines feel free to add a few
-    # information about you and your website.
-	name = "Cyril Lay"
-	description = "Personal freelance website."
+    background = "/img/bg11.jpg"
+    tint = "orange"
+    custom_css = ["css/highlight.min.css"]
+    custom_js = []
+    date_format = "Mon, Jan 2, 2006"
+    description = "A website built through Hugo and blogdown."
 
-	# Format dates with Go's time formatting
-	date_format = "2006-01-02"
-
-	# Add read time estimates in the format "X min read"
-	show_read_time = true
-
-	# Add custom assets with their paths relative to the static folder
-	custom_js   = []
-	custom_css  = []
+    # options for highlight.js (version, additional languages, and theme)
+    highlightjsVersion = "9.10.0"
+    highlightCDN = "//cdn.bootcss.com"
+    highlightjsLang = ["r", "yaml"]
+    highlightjsTheme = "github"
 
 
-	[params.sidebar]
-		# Replace the avatar with a picture of your own under static/images
-		avatar = "Cyril-Yosemite.jpg"
-		# Use Markdown to format the string. This works nearly all over the theme
-		bio = "**Cyril Lay** - Machine Learning Engineer"
-		# The icons will be shown if you enter your username
-		twitter = ""
-		github = "cyrillay"
-		gitlab = ""
-		dribbble = ""
-		facebook = ""
-		googleplus = ""
-		flickr = ""
-		linkedin = "cyril-lay-2017"
+    
 
-		copyright = [
-			"&copy; Cyril Lay",
-			"Design: [HTML5 UP](//html5up.net)"
-		]
-
-
-	[params.about]
-		hide  = false
-		title = "Welcome to my website."
-		content = "I am a freelance developer, with experience in data science, data engineering and ML engineering. I can help you build AI applications, by transforming your data to extract its business value, and automate this process in a reliable and cost-efficient way."
-
-
-	[params.portfolio]
-		hide  = false
-		title = "My projects"
-
-		# The images and thumbnails are stored under static/images
-		# Create and change subfolders as you like
-		[[params.portfolio.gallery]]
-			title = "[Bot detection system](/post/bot-detection)"
-			description = "A module for detecting bots from web traffic. [Read more ...](/post/bot-detection)"
-
-		[[params.portfolio.gallery]]
-			#image = "inference-app-screenshot.png"
-			#thumb = "thumbs/inference-app-screenshot.png"
-			title = "[Image classifier](/post/classification-api)"
-			description = "Simple React UI connected to an inference REST API. [Read more ...](/post/classification-api)"
-
-		[[params.portfolio.gallery]]
-			title = "[Deep Fake Detection Challenge (Computer vision on videos)](/post/dfdc-challenge-kaggle)"
-			description = "A step by step guide on how I proceeded during this kaggle competition. [Read more...](/post/dfdc-challenge-kaggle)"
-
-		[[params.portfolio.gallery]]
-			title = "[Plant Pathology 2020 Detection Challenge (Kaggle, multi-class image classification)](/post/plant-pathology-challenge-kaggle)"
-			description = "A step by step guide on how I proceeded during this kaggle competition. [Read more...](/post/plant-pathology-challenge-kaggle)"
-
-	[params.recentposts]
-		hide  = true
-		title = "Recent blog posts"
-
-	[params.contact]
-		hide  = false
-		title = "Get In Touch"
-		content = "Please contact me using the form below for any enquiry."
-
-		# This can be exact coordinates or a searchable address in google maps
-		#gmaps_address = "39.7889055,-120.5443524"
-		address = ["Paris, France"]
-			# phone = "310-404-****"
-
-		# Since this template is static, the contact form uses www.formspree.io as a
-		# proxy. The form makes a POST request to their servers to send the actual
-		# email. Visitors can send up to a 1000 emails each month for free.
-	    #
-	    # What you need to do for the setup?
-	    #
-	    # - set your email address under 'email' below
-	    # - upload the generated site to your server
-	    # - send a dummy email yourself to confirm your account
-	    # - click the confirm link in the email from www.formspree.io
-	    # - you're done. Happy mailing!
-		email = "cyril.lay.pro@gmail.com"
-
-		[params.contact.form]
-			name = "Name"
-			email = "Email"
-			message = "Message"
-			submit = "Send message"
-
-
-# Menu links that appear on the left sidebar
-[[menu.main]]
-	name = "Home"
-	url  = "/"
-	weight = 10
-
-[[menu.main]]
-	name = "Skills & achievements"
-	url  = "post/skills-achievements"
-	weight = 0
