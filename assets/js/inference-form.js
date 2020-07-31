@@ -6,7 +6,7 @@ $(".carousel-indicators li").on('click', function(){
 })
 
 async function fetchClassificationPredictions(file) {
-    const UPLOAD_URL = 'http://lays.pro:5000/predict';
+    const UPLOAD_URL = 'https://lays.pro:5000/predict';
     const payload = new FormData();
     payload.append("image", file);
     return fetch(UPLOAD_URL, {
@@ -16,7 +16,7 @@ async function fetchClassificationPredictions(file) {
 }
 
 async function fetchSegmentationPredictions(file) {
-    const UPLOAD_URL = 'http://lays.pro:5000/predict/object-detection';
+    const UPLOAD_URL = 'https://lays.pro:5000/predict/object-detection';
     const payload = new FormData();
     payload.append("image", file);
     return fetch(UPLOAD_URL, {
