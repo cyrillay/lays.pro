@@ -549,3 +549,12 @@ fieldset {
     50%  {opacity:0.5; }
     75%  {opacity:0.75; }
 }
+
+/*h1 {*/
+/*    word-wrap: break-word;*/
+/*    -webkit-hyphens: auto;*/
+/*    -moz-hyphens: auto;*/
+/*    -ms-hyphens: auto;*/
+/*    -o-hyphens: auto;*/
+/*    hyphens: auto;*/
+/*}*/

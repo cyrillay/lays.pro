@@ -6,7 +6,7 @@ $(".carousel-indicators li").on('click', function(){
 })
 
 async function fetchClassificationPredictions(file) {
-    const UPLOAD_URL = 'http://lays.pro:5000/predict';
+    const UPLOAD_URL = 'https://api.lays.pro/predict';
     const payload = new FormData();
     payload.append("image", file);
     return fetch(UPLOAD_URL, {
@@ -16,7 +16,7 @@ async function fetchClassificationPredictions(file) {
 }
 
 async function fetchSegmentationPredictions(file) {
-    const UPLOAD_URL = 'http://lays.pro:5000/predict/object-detection';
+    const UPLOAD_URL = 'https://api.lays.pro/predict/object-detection';
     const payload = new FormData();
     payload.append("image", file);
     return fetch(UPLOAD_URL, {
@@ -27,7 +27,7 @@ async function fetchSegmentationPredictions(file) {
 
 $(function() {
     $("#classification_image_input_form").change(async function() {
-        console.log("classifying image...");
+        console.log("Classifying image...");
         $("#classification_loader").css("display","block");
         const file_data = $('#input_classification').prop('files')[0];
         response = await fetchClassificationPredictions(file_data);
@@ -41,7 +41,7 @@ $(function() {
     });
 
     $("#segmentation_image_form").change(async function() {
-        console.log("classifying image...");
+        console.log("Segmenting  image...");
         $("#segmentation_loader").css("display","block");
         const file_data = $('#input_segmentation').prop('files')[0];
         response = await fetchSegmentationPredictions(file_data);
