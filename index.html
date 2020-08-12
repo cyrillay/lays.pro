@@ -111,7 +111,7 @@
                 <img src="assets/lays.pro/img/cyril-2.jpg " alt="Profile picture" class="profile-image">
             </div>
             <h3 class="title" id="about">Cyril LAY</h3>
-            <h2 class="category">Machine Learning Engineer</h2>
+            <h2 class="category" style="font-size: 2.5vw">Machine Learning Engineer</h2>
             <!--            <p>Welcome to my website.</p>-->
         </div>
     </div>
@@ -438,10 +438,10 @@
                                 <a class="nav-link-custom px-4" data-toggle="tab" href="#cloud" role="tab"
                                    id="cloud-nav-button">
                                     <!--                                        <i class="fas fa-microscope pr-1"></i>-->
-                                    Ops</a>
+                                    Devops</a>
                                 <a class="nav-link-custom px-4" data-toggle="tab" href="#mle" role="tab"
                                    id="cloud-mle-button">
-                                    ML Engineering</a>
+                                    Machine Learning Engineering</a>
                             </nav>
                             <div class="card-body mt-3">
                                 <!-- Tab panes -->
@@ -576,7 +576,7 @@
                                                 I can work with your team to shorten and optimize your application
                                                 lifecycle process, and facilitate
                                                 fast and clean deployments via standardization and automation.
-
+                                                I am also able to architect your systems using a cloud provider of your choice (AWS, GCP, Azure, IBMCloud)
                                             </p>
 
                                             <p>
@@ -611,21 +611,31 @@
                                     </div>
                                     <div class="tab-pane text-center pt-3" id="mle" role="tabpanel">
                                         <div id="mle-tab">
+                                            <p>
+                                                Building a machine learning model is easy, but deploying it and building
+                                                a reliable, robust and scalable end to end machine learning workflow and inference pipeline
+                                                is complex and tedious, and requires many skills beyond data science.
 
-                                            <div class="d-flex">
+                                                I aim to bridge the gap between data scientists, data engineers and devops engineers and am able to
+                                                architect ML pipelines from end-to-end, including data collection and preparation, model selection and serving.
+                                            </p>
 
-                                            <ul class="list-group col-5 mx-auto mb-4">
-                                                <li class="list-group-item text-black">Version your data effectively</li>
-                                                <li class="list-group-item text-black">Efficiently pre-process data for training and validation</li>
-                                                <li class="list-group-item text-black">Version control your model checkpoints during training</li>
-                                                <li class="list-group-item text-black">Track your model training experiments</li>
-                                                <li class="list-group-item text-black">Analyze and validate the trained and tuned models</li>
-                                                <li class="list-group-item text-black">Deploy the validated model</li>
-                                                <li class="list-group-item text-black">Scale the deployed model</li>
-                                                <li class="list-group-item text-black">Capture new training data and model performance metrics with feedback loops</li>
-                                            </ul>
+                                            <figure>
+                                            <img src="assets/lays.pro/img/png/ml_workflow_oreilly.png" height="400em" alt="ml_workflow_oreilly">
+                                                <figcaption>Source : Introducing MLOps - O'reilly ®</figcaption>
+                                            </figure>
+
+                                            <h5 class="text-center">Frameworks</h5>
+
+                                            <div class="col px-4 d-flex flex-wrap justify-content-center align-items-center"
+                                                 style="background: transparent; border-radius: 7px">
+                                                <img src="assets/lays.pro/svg/kubeflow.svg" alt="Kubeflow Logo"
+                                                     height="55em"/>
+                                                <img src="assets/lays.pro/svg/mlflow.svg" height="40em"
+                                                     class="ml-4 "/>
+                                                <img src="assets/lays.pro/svg/docker.svg" height="45em"
+                                                     class="ml-4 mt-2 mb-2 "/>
                                             </div>
-
 
 
                                         </div>
@@ -864,7 +874,7 @@
                                     <div class="d-flex justify-content-between align-items-end">
                                         <form class="md-form" id="segmentation_image_form">
                                             <div class="custom-file">
-                                                <input class="custom-file-input" type="file"
+                                                <input class="custom-file-input" type="file" accept="image/png, image/jpeg, image/jpg"
                                                        id="input_segmentation" onchange="
                                                                    function readURL(input) {
                                                                         if (input.files && input.files[0]) {
@@ -1005,7 +1015,7 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <form class="md-form" id="classification_image_input_form">
                                             <div class="custom-file">
-                                                <input class="custom-file-input" type="file"
+                                                <input class="custom-file-input" type="file" accept="image/png, image/jpeg, image/jpg"
                                                        id="input_classification" onchange="
                                                                    function readURL(input) {
                                                                         if (input.files && input.files[0]) {
