@@ -74,6 +74,9 @@
             <a class="navbar-brand" href="#latest-work" data-placement="bottom">
                 Latest Work
             </a>
+            <a class="navbar-brand" href="http://old.lays.pro/blog/blog-summary" target="_blank" data-placement="bottom">
+                Blog
+            </a>
 
             <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                     aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -175,7 +178,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="copy">
-                            I am an independent software engineer that specialises in <strong>data</strong>. Having spent a number of years working with large data sets as a full time machine learning engineer, I am now available to work on a contract basis. I have a masters degree in computer science with a specialisation in <strong>data mining</strong>.
+                            I am an independent software engineer that specialises in <strong>data</strong>. Having spent a number of years working with large data sets as a full time machine learning engineer, I now work on a contract basis. I have a masters degree in computer science with a specialisation in <strong>data mining</strong>.
                             I enjoy working independently and as part of a team.
                             <br>
                         </p>
@@ -183,8 +186,7 @@
                             Please get in contact if you'd like to explore opportunities to work together.
                         </p>
                         <p>
-                            <a data-toggle="modal" data-target="#contact-form-modal" class="btn btn-primary my-2">Contact
-                                me</a>
+                            <a data-toggle="modal" data-target="#contact-form-modal" class="btn btn-primary my-2">Contact</a>
                             <a href="#latest-work" class="btn btn-secondary my-2">Portfolio</a>
                         </p>
                     </div>
@@ -852,19 +854,19 @@
                                         src="assets/lays.pro/img/portfolio/semantic-segmentation.jpeg"
                                         data-holder-rendered="true">
                                 <div class="card-body">
-                                    <div class="modal fade" id="segmentation_modal" tabindex="-1" role="dialog"
-                                         aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" style="max-width: 80%">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <button type="button" class="close" data-dismiss="modal"><span
-                                                            aria-hidden="true">&times;</span><span
-                                                            class="sr-only">Close</span></button>
-                                                    <img src="" id="image_placeholder_segmentation">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+<!--                                    <div class="modal fade" id="segmentation_modal" tabindex="-1" role="dialog"-->
+<!--                                         aria-labelledby="myModalLabel" aria-hidden="true">-->
+<!--                                        <div class="modal-dialog" style="max-width: 80%">-->
+<!--                                            <div class="modal-content">-->
+<!--                                                <div class="modal-body">-->
+<!--                                                    <button type="button" class="close" data-dismiss="modal"><span-->
+<!--                                                            aria-hidden="true">&times;</span><span-->
+<!--                                                            class="sr-only">Close</span></button>-->
+<!--                                                    <img src="" id="image_placeholder_segmentation_modal">-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
 
 
                                     <p class="card-text">
@@ -874,21 +876,21 @@
                                     <div class="d-flex justify-content-between align-items-end">
                                         <form class="md-form" id="segmentation_image_form">
                                             <div class="custom-file">
-                                                <input class="custom-file-input" type="file" accept="image/png, image/jpeg, image/jpg"
-                                                       id="input_segmentation" onchange="
-                                                                   function readURL(input) {
-                                                                        if (input.files && input.files[0]) {
-                                                                            var reader = new FileReader();
-                                                                            reader.onload = function (new_img_src) {
-                                                                                $('#image_placeholder_segmentation').attr('src', new_img_src.target.result);
-                                                                            };
+<!--                                                <input class="custom-file-input" type="file" accept="image/png, image/jpeg, image/jpg"-->
+<!--                                                       id="input_segmentation" onchange="-->
+<!--                                                                   function readURL(input) {-->
+<!--                                                                        if (input.files && input.files[0]) {-->
+<!--                                                                            var reader = new FileReader();-->
+<!--                                                                            reader.onload = function (new_img_src) {-->
+<!--                                                                                $('#image_placeholder_segmentation').attr('src', new_img_src.target.result);-->
+<!--                                                                            };-->
 
-                                                                            reader.readAsDataURL(input.files[0]);
-                                                                        }
+<!--                                                                            reader.readAsDataURL(input.files[0]);-->
+<!--                                                                        }-->
 
-                                                                    }
-                                                            readURL(this);"
-                                                       style="width: 240px">
+<!--                                                                    }-->
+<!--                                                            readURL(this);"-->
+<!--                                                       style="width: 240px">-->
                                                 <label class="custom-file-label" for="input_classification">Try it out
                                                     !</label>
                                             </div>
@@ -1050,6 +1052,127 @@
         </div>
     </div>
     <!--  END PORTFOLIO  -->
+
+    <div class="section background-2 row">
+        <div class="col mx-5">
+            <h2>Deeplabv3+</h2>
+            <p>
+                DeepLab is a state-of-art deep learning model for semantic image segmentation, where the goal is to assign semantic labels (e.g., person, car, dog, bicycle and so on) to every pixel in the input image.
+            </p>
+            <p>
+                DeepLabv3+, extends DeepLabv3 by adding a simple yet effective decoder module to refine the segmentation results especially along object boundaries.
+            </p>
+            <p>
+                According to <a class="text-white" href="https://paperswithcode.com/sota/semantic-segmentation-on-pascal-voc-2012">Papers With Code</a>, it has the best accuracy and is the current state of the art on
+                the <a class="text-white" href="http://lear.inrialpes.fr/RecogWorkshop08/documents/everingham.pdf">Pascal VOC dataset</a>.
+            </p>
+            <p>
+                The code is available <a class="text-white" href="https://github.com/tensorflow/models/tree/master/research/deeplab">here.</a>
+            </p>
+        </div>
+        <div class="col-5">
+            <div class="row d-flex justify-content-center">
+                <h3 class="mb-1">
+                    Try it out !
+                </h3>
+            </div>
+            <!--      Modal window with inference results      -->
+            <div class="modal fade" id="segmentation_modal" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" style="max-width: 80%">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span
+                                    class="sr-only">Close</span></button>
+                            <img src="" id="image_placeholder_segmentation_modal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="image-upload">
+                    <label for="input_segmentation">
+                        <img id="image_placeholder_segmentation" src="assets/lays.pro/img/placeholder.png" width="300" alt="Your image here">
+                    </label>
+                    <input id="input_segmentation" type="file" accept="image/png, image/jpeg, image/jpg" style="display: none"
+                           onchange="
+                                                                   function readURL(input) {
+                                                                        if (input.files && input.files[0]) {
+                                                                            var reader = new FileReader();
+                                                                            reader.onload = function (new_img_src) {
+                                                                                $('#image_placeholder_segmentation').attr('src', new_img_src.target.result);
+                                                                            };
+
+                                                                            reader.readAsDataURL(input.files[0]);
+                                                                        }
+
+                                                                    }
+                                                            readURL(this);"/>
+
+
+
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-1">
+                <h4 class="mb-1 mt-1">Or send one of the sample images...</h4>
+            </div>
+            <div class="row d-flex justify-content-around mt-2">
+
+                <div class="col">
+                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-1.jpg" width="90%" height="90%" onclick="
+                    async function gooo() {
+                        $('#image_placeholder_segmentation').attr('src', $(this).attr('src'));
+                    function getBase64Image(img) {
+                      var canvas = document.createElement('canvas');
+                                        canvas.width = img.width;
+                                        canvas.height = img.height;
+                                        img.setAttribute('crossorigin', 'anonymous');
+                                        var ctx = canvas.getContext('2d');
+                                        ctx.drawImage(img, 0, 0);
+                                        var dataURL = canvas.toDataURL('image/jpg');
+                                        return dataURL.replace(/^data:image\/(png|jpg);base64,/, '');
+                                        }
+                    imggg = document.getElementById('image_placeholder_segmentation');
+                    var base64 = getBase64Image(imggg);
+                    console.log('base64=', base64);
+                    response = await fetchSegmentationPredictions(base64);
+                    predictions = response.blob();
+                    console.log('response=',predictions);
+                    predictions.then((segmentation_response) => {
+                        console.log(segmentation_response)
+                        var urlCreator = window.URL || window.webkitURL;
+                        segmented_img = urlCreator.createObjectURL(segmentation_response)
+                        $('#image_placeholder_segmentation_modal').attr('src', segmented_img);
+                        $('#segmentation_loader').css('display','none');
+                                $('#segmentation_modal').modal('show');
+                                var reader = new FileReader();
+                                reader.readAsDataURL(segmentation_response);
+                                reader.onloadend = function() {
+                                var base64data = reader.result;
+                                console.log(base64data);
+                                }
+
+                                //    TODO : check sweetalert
+                                })
+                    }
+                    gooo();
+">
+                </div>
+                <div class="col">
+                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-2.jpg" width="90%" height="90%" onclick="$('#image_placeholder_segmentation').attr('src', $(this).attr('src'));">
+                </div>
+                <div class="col">
+                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-3.jpg" width="90%" height="90%" onclick="$('#image_placeholder_segmentation').attr('src', $(this).attr('src'));">
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
 
 
 </div>

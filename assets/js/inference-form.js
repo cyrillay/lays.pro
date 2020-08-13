@@ -1,4 +1,4 @@
-console.log("Loading js...");
+console.log("Loading javascript...");
 
 $(".carousel-indicators li").on('click', function(){
     $(this).siblings().removeClass('active')
@@ -40,15 +40,16 @@ $(function() {
         })
     });
 
-    $("#segmentation_image_form").change(async function() {
+    $("#input_segmentation").change(async function() {
         console.log("Segmenting  image...");
         $("#segmentation_loader").css("display","block");
         const file_data = $('#input_segmentation').prop('files')[0];
+
         response = await fetchSegmentationPredictions(file_data);
         predictions = response.blob();
         predictions.then((segmentation_response) => {
-            img = URL.createObjectURL(segmentation_response)
-            $('#image_placeholder_segmentation').attr('src', img);
+            segmented_img = URL.createObjectURL(segmentation_response)
+            $('#image_placeholder_segmentation_modal').attr('src', segmented_img);
             $("#segmentation_loader").css("display","none");
             $('#segmentation_modal').modal('show');
             var reader = new FileReader();
