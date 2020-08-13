@@ -1120,50 +1120,13 @@
             <div class="row d-flex justify-content-around mt-2">
 
                 <div class="col">
-                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-1.jpg" width="90%" height="90%" onclick="
-                    async function gooo() {
-                        $('#image_placeholder_segmentation').attr('src', $(this).attr('src'));
-                    function getBase64Image(img) {
-                      var canvas = document.createElement('canvas');
-                                        canvas.width = img.width;
-                                        canvas.height = img.height;
-                                        img.setAttribute('crossorigin', 'anonymous');
-                                        var ctx = canvas.getContext('2d');
-                                        ctx.drawImage(img, 0, 0);
-                                        var dataURL = canvas.toDataURL('image/jpg');
-                                        return dataURL.replace(/^data:image\/(png|jpg);base64,/, '');
-                                        }
-                    imggg = document.getElementById('image_placeholder_segmentation');
-                    var base64 = getBase64Image(imggg);
-                    console.log('base64=', base64);
-                    response = await fetchSegmentationPredictions(base64);
-                    predictions = response.blob();
-                    console.log('response=',predictions);
-                    predictions.then((segmentation_response) => {
-                        console.log(segmentation_response)
-                        var urlCreator = window.URL || window.webkitURL;
-                        segmented_img = urlCreator.createObjectURL(segmentation_response)
-                        $('#image_placeholder_segmentation_modal').attr('src', segmented_img);
-                        $('#segmentation_loader').css('display','none');
-                                $('#segmentation_modal').modal('show');
-                                var reader = new FileReader();
-                                reader.readAsDataURL(segmentation_response);
-                                reader.onloadend = function() {
-                                var base64data = reader.result;
-                                console.log(base64data);
-                                }
-
-                                //    TODO : check sweetalert
-                                })
-                    }
-                    gooo();
-">
+                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-1.jpg" width="90%" height="90%" onclick="preddd('https://www.lays.pro/assets/lays.pro/img/portfolio/demo-1.jpg');">
                 </div>
                 <div class="col">
-                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-2.jpg" width="90%" height="90%" onclick="$('#image_placeholder_segmentation').attr('src', $(this).attr('src'));">
+                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-2.jpg" width="90%" height="90%" onclick="preddd('https://www.lays.pro/assets/lays.pro/img/portfolio/demo-2.jpg');">
                 </div>
                 <div class="col">
-                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-3.jpg" width="90%" height="90%" onclick="$('#image_placeholder_segmentation').attr('src', $(this).attr('src'));">
+                    <img src="assets/lays.pro/img/portfolio/sample_input/demo-3.jpg" width="90%" height="90%" onclick="preddd('https://www.lays.pro/assets/lays.pro/img/portfolio/demo-3.jpg');">
                 </div>
             </div>
         </div>
@@ -1239,6 +1202,7 @@
 
 <!-- Custom scripts -->
 <script src="assets/js/inference-form.js"></script>
+<script src="assets/js/inference-helpers.js"></script>
 <script src="assets/owlcarousel/owl.carousel.min.js"></script>
 
 </body>

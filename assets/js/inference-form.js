@@ -41,27 +41,16 @@ $(function() {
     });
 
     $("#input_segmentation").change(async function() {
-        console.log("Segmenting  image...");
-        $("#segmentation_loader").css("display","block");
+        startLoading();
         const file_data = $('#input_segmentation').prop('files')[0];
-
-        response = await fetchSegmentationPredictions(file_data);
-        predictions = response.blob();
-        predictions.then((segmentation_response) => {
+        const response = await fetchSegmentationPredictions(file_data);
+        response.blob().then((segmentation_response) => {
             segmented_img = URL.createObjectURL(segmentation_response)
-            $('#image_placeholder_segmentation_modal').attr('src', segmented_img);
-            $("#segmentation_loader").css("display","none");
-            $('#segmentation_modal').modal('show');
-            var reader = new FileReader();
-            reader.readAsDataURL(segmentation_response);
-            reader.onloadend = function() {
-                var base64data = reader.result;
-                console.log(base64data);
-            }
-
-            //    TODO : check sweetalert
+            showSegmentationModal(segmented_img);
         })
     });
+
+
 
 });
 
