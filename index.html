@@ -87,6 +87,9 @@
             <a class="navbar-brand" href="#latest-work" data-placement="bottom">
                 Latest Work
             </a>
+            <a class="navbar-brand" href="http://old.lays.pro/blog/blog-summary" target="_blank" data-placement="bottom">
+                Blog
+            </a>
 
             <button class="navbar-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
                     aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
@@ -188,7 +191,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="copy">
-                            I am an independent software engineer that specialises in <strong>data</strong>. Having spent a number of years working with large data sets as a full time machine learning engineer, I am now available to work on a contract basis. I have a masters degree in computer science with a specialisation in <strong>data mining</strong>.
+                            I am an independent software engineer that specialises in <strong>data</strong>. Having spent a number of years working with large data sets as a full time machine learning engineer, I now work on a contract basis. I have a masters degree in computer science with a specialisation in <strong>data mining</strong>.
                             I enjoy working independently and as part of a team.
                             <br>
                         </p>
@@ -196,8 +199,7 @@
                             Please get in contact if you'd like to explore opportunities to work together.
                         </p>
                         <p>
-                            <a data-toggle="modal" data-target="#contact-form-modal" class="btn btn-primary my-2">Contact
-                                me</a>
+                            <a data-toggle="modal" data-target="#contact-form-modal" class="btn btn-primary my-2">Contact</a>
                             <a href="#latest-work" class="btn btn-secondary my-2">Portfolio</a>
                         </p>
                     </div>
@@ -857,68 +859,6 @@
                         </div>
 
                         <div class="col-md-4">
-                            <div class="card mb-4 box-shadow">
-                                <img
-                                        class="card-img-top"
-                                        alt="Semantic segmantation example image"
-                                        style="height: 225px; width: 100%; display: block;"
-                                        src="assets/lays.pro/img/portfolio/semantic-segmentation.jpeg"
-                                        data-holder-rendered="true">
-                                <div class="card-body">
-                                    <div class="modal fade" id="segmentation_modal" tabindex="-1" role="dialog"
-                                         aria-labelledby="myModalLabel" aria-hidden="true">
-                                        <div class="modal-dialog" style="max-width: 80%">
-                                            <div class="modal-content">
-                                                <div class="modal-body">
-                                                    <button type="button" class="close" data-dismiss="modal"><span
-                                                            aria-hidden="true">&times;</span><span
-                                                            class="sr-only">Close</span></button>
-                                                    <img src="" id="image_placeholder_segmentation">
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-
-                                    <p class="card-text">
-                                        A state of the art semantic segmentation model assigning a label to each pixel
-                                        of your pictures, such as car, chair, bicycle or person.
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-end">
-                                        <form class="md-form" id="segmentation_image_form">
-                                            <div class="custom-file">
-                                                <input class="custom-file-input" type="file" accept="image/png, image/jpeg, image/jpg"
-                                                       id="input_segmentation" onchange="
-                                                                   function readURL(input) {
-                                                                        if (input.files && input.files[0]) {
-                                                                            var reader = new FileReader();
-                                                                            reader.onload = function (new_img_src) {
-                                                                                $('#image_placeholder_segmentation').attr('src', new_img_src.target.result);
-                                                                            };
-
-                                                                            reader.readAsDataURL(input.files[0]);
-                                                                        }
-
-                                                                    }
-                                                            readURL(this);"
-                                                       style="width: 240px">
-                                                <label class="custom-file-label" for="input_classification">Try it out
-                                                    !</label>
-                                            </div>
-                                        </form>
-                                        <small class="text-muted">June 2020</small>
-
-                                    </div>
-
-                                    <div class="d-flex justify-content-center">
-                                        <div class="loader mt-3" id="segmentation_loader" style="display: none"></div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
                             <div class="card mb-3 box-shadow">
                                 <img class="card-img-top"
                                      alt="Big data pipeline at GumGum"
@@ -949,39 +889,6 @@
                         <div class="col-md-4">
                             <div class="card mb-3 box-shadow">
                                 <img class="card-img-top"
-                                     alt="Thumbnail [100%x225]"
-                                     src="assets/lays.pro/img/portfolio/gumgum-forecasting.png"
-                                     data-holder-rendered="true"
-                                     height="180px"
-                                >
-                                <div class="card-body md-6">
-                                    <p class="card-text">
-                                        Designed and deployed a high-scale programmatic inventory forecasting tool. This
-                                        tool used an ARIMA forecasting model (in R) and hundreds of terabytes of
-                                        historical data to produce a forecast of ad inventory. In close cooperation with
-                                        the sales and business teams, we provided the end-users the ability to determine
-                                        achievable ad campaigns goals with confidence using the forecast results.
-                                    </p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a href="https://medium.com/gumgum-tech/time-series-forecasting-at-scale-8201f03a3217"
-                                               role="button" class="btn btn-sm btn-primary btn-outline-secondary"
-                                               target="_blank">Learn more
-                                            </a>
-                                            <a href="https://aws.amazon.com/fr/solutions/case-studies/gumgum/"
-                                               role="button" class="btn btn-sm btn-primary btn-outline-secondary"
-                                               target="_blank">AWS Case study
-                                            </a>
-                                        </div>
-                                        <small class="text-muted">Aug 2019</small>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4">
-                            <div class="card mb-3 box-shadow">
-                                <img class="card-img-top"
                                      alt="Cruise control architecture"
                                      src="assets/lays.pro/img/portfolio/cruise-control.jpg"
                                      data-holder-rendered="true"
@@ -1002,6 +909,39 @@
                                             </a>
                                         </div>
                                         <small class="text-muted">Apr 2019</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4">
+                            <div class="card mb-3 box-shadow">
+                                <img class="card-img-top"
+                                     alt="Thumbnail [100%x225]"
+                                     src="assets/lays.pro/img/portfolio/gumgum-forecasting.png"
+                                     data-holder-rendered="true"
+                                     height="180px"
+                                >
+                                <div class="card-body md-6">
+                                    <p class="card-text">
+                                        Developed a high-scale programmatic inventory forecasting web tool. This
+                                        tool used an ARIMA forecasting model and hundreds of terabytes of
+                                        historical data to produce a forecast of ad inventory. In close cooperation with
+                                        the operational teams, we provided the end-users the ability to determine
+                                        achievable ad campaigns goals with confidence using the forecast results.
+                                    </p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div class="btn-group">
+                                            <a href="https://medium.com/gumgum-tech/time-series-forecasting-at-scale-8201f03a3217"
+                                               role="button" class="btn btn-sm btn-primary btn-outline-secondary"
+                                               target="_blank">Learn more
+                                            </a>
+                                            <a href="https://aws.amazon.com/fr/solutions/case-studies/gumgum/"
+                                               role="button" class="btn btn-sm btn-primary btn-outline-secondary"
+                                               target="_blank">AWS Case study
+                                            </a>
+                                        </div>
+                                        <small class="text-muted">Aug 2019</small>
                                     </div>
                                 </div>
                             </div>
@@ -1063,6 +1003,113 @@
         </div>
     </div>
     <!--  END PORTFOLIO  -->
+
+    <div class="section background-2 row px-4">
+        <div class="col-lg-6 col-sm-12">
+            <h2>Deeplabv3+</h2>
+            <p>
+                DeepLab is a state-of-art deep learning model for semantic image segmentation, where the goal is to assign semantic labels (e.g., person, car, dog, bicycle and so on) to every pixel in the input image.
+            </p>
+            <p>
+                DeepLabv3+, extends DeepLabv3 by adding a simple yet effective decoder module to refine the segmentation results especially along object boundaries.
+            </p>
+            <p>
+                According to <a class="text-white" href="https://paperswithcode.com/sota/semantic-segmentation-on-pascal-voc-2012">Papers With Code</a>, it has the best accuracy and is the current state of the art on
+                the <a class="text-white" href="http://lear.inrialpes.fr/RecogWorkshop08/documents/everingham.pdf">Pascal VOC dataset</a>.
+            </p>
+            <p>
+                The code is available <a class="text-white" href="https://github.com/tensorflow/models/tree/master/research/deeplab">here.</a>
+            </p>
+        </div>
+        <div class="col-lg-6 col-sm-12 inference-component-container py-3">
+            <div class="row d-flex justify-content-center">
+                <h3 class="mb-1">
+                    Try it out !
+                </h3>
+            </div>
+            <!--      Modal window with inference results      -->
+            <div class="modal fade" id="segmentation_modal" tabindex="-1" role="dialog"
+                 aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog" style="max-width: 80%">
+                    <div class="modal-content">
+                        <div class="modal-body">
+                            <button type="button" class="close" data-dismiss="modal"><span
+                                    aria-hidden="true">&times;</span><span
+                                    class="sr-only">Close</span></button>
+                            <img src="" id="image_placeholder_segmentation_modal">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+                <div class="image-upload">
+                    <label for="input_segmentation">
+                        <div class="image-input-container">
+                            <img class="sample_input_image" id="image_placeholder_segmentation" src="assets/lays.pro/img/placeholder.png" width="300" alt="Your image here">
+                            <div class="middle">
+                                <div class="text">Click to upload</div>
+                            </div>
+                            <div class="loading">
+                                <div class="loader mt-3" id="segmentation_loader"></div>
+                            </div>
+                        </div>
+                    </label>
+                    <input id="input_segmentation" type="file" accept="image/png, image/jpeg, image/jpg" style="display: none"
+                           onchange="
+                                                                   function readURL(input) {
+                                                                        if (input.files && input.files[0]) {
+                                                                            var reader = new FileReader();
+                                                                            reader.onload = function (new_img_src) {
+                                                                                $('#image_placeholder_segmentation').attr('src', new_img_src.target.result);
+                                                                            };
+
+                                                                            reader.readAsDataURL(input.files[0]);
+                                                                        }
+
+                                                                    }
+                                                            readURL(this);"/>
+
+
+
+                </div>
+            </div>
+            <div class="row d-flex justify-content-center mt-1">
+                <h4 class="mb-1 mt-1">Or send one of the sample images...</h4>
+            </div>
+            <div class="row d-flex justify-content-around mt-2">
+
+                <div class="col">
+                    <div class="image-input-container" onclick="fetchSegmentationPredictionsFromUrl('https://www.lays.pro/assets/lays.pro/img/portfolio/sample_input/demo-1.jpg');">
+                        <img class="sample_input_image" src="assets/lays.pro/img/portfolio/sample_input/demo-1.jpg">
+                        <div class="middle">
+                            <div class="text">Click to send</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-input-container" onclick="fetchSegmentationPredictionsFromUrl('https://www.lays.pro/assets/lays.pro/img/portfolio/sample_input/demo-2.jpg');">
+                        <img class="sample_input_image" src="assets/lays.pro/img/portfolio/sample_input/demo-2.jpg">
+                        <div class="middle">
+                            <div class="text">Click to send</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="image-input-container" onclick="fetchSegmentationPredictionsFromUrl('https://www.lays.pro/assets/lays.pro/img/portfolio/sample_input/demo-3.jpg');">
+                        <img class="sample_input_image" src="assets/lays.pro/img/portfolio/sample_input/demo-3.jpg">
+                        <div class="middle">
+                            <div class="text">Click to send</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    </div>
 
 
 </div>
@@ -1137,6 +1184,7 @@
 
 <!-- Custom scripts -->
 <script src="assets/js/inference-form.js"></script>
+<script src="assets/js/inference-helpers.js"></script>
 <script src="assets/owlcarousel/owl.carousel.min.js"></script>
 
 </body>
