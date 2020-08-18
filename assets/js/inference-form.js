@@ -5,26 +5,6 @@ $(".carousel-indicators li").on('click', function(){
     $(this).addClass('active');
 })
 
-async function fetchClassificationPredictions(file) {
-    const UPLOAD_URL = 'https://api.lays.pro/predict';
-    const payload = new FormData();
-    payload.append("image", file);
-    return fetch(UPLOAD_URL, {
-        method: "POST",
-        body: payload
-    });
-}
-
-async function fetchSegmentationPredictions(file) {
-    const UPLOAD_URL = 'https://api.lays.pro/predict/object-detection';
-    const payload = new FormData();
-    payload.append("image", file);
-    return fetch(UPLOAD_URL, {
-        method: "POST",
-        body: payload
-    });
-}
-
 $(function() {
     $("#classification_image_input_form").change(async function() {
         console.log("Classifying image...");
@@ -43,14 +23,12 @@ $(function() {
     $("#input_segmentation").change(async function() {
         startLoading();
         const file_data = $('#input_segmentation').prop('files')[0];
-        const response = await fetchSegmentationPredictions(file_data);
+        const response = await fetchSegmentationPredictionsFromFile(file_data);
         response.blob().then((segmentation_response) => {
             segmented_img = URL.createObjectURL(segmentation_response)
             showSegmentationModal(segmented_img);
         })
     });
-
-
 
 });
 
