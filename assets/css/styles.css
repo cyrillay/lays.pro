@@ -315,6 +315,11 @@ p {
     line-height: 1.5;
 }
 
+li {
+    font-weight: 300;
+    line-height: 1.5;
+}
+
 .heading--content {
     font-size: 1.4rem;
     margin-bottom: 14px;
