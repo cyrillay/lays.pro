@@ -318,6 +318,7 @@ p {
 li {
     font-weight: 300;
     line-height: 1.5;
+    font-size: 1.2em;
 }
 
 .heading--content {
@@ -615,3 +616,44 @@ fieldset {
 }
 
 /* End of Inference component  */
+
+/*
+ Numbers component
+*/
+
+
+
+.impact-numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0;
+  }
+  
+  .impact-number {
+    text-align: center;
+    width: 30%;
+    transition: all 0.2s;
+  }
+  
+  .impact-number:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .impact-number h3 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0 0 10px;
+    color: mintcream; /* adjust this color to match your website's color scheme */
+    transition: all 0.2s;
+  }
+  
+  .impact-number p {
+    font-size: 18px;
+    font-weight: bold;
+    color: mintcream; /* adjust this color to match your website's color scheme */
+    margin: 0;
+    transition: all 0.2s;
+  }
+  
