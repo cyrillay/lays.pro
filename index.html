@@ -145,6 +145,7 @@
                 <h2 class="heading--section text-center mb-0">Contact</h2>
 
                 <form class="form form--contact is-success" id="contact-form">
+                    <input type="hidden" name="contact_number">
                     <fieldset class="input input--text">
                         <input type="text" name="name" placeholder="Name" required="">
                     </fieldset>
@@ -191,8 +192,9 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="copy">
-                            I am a software engineer that specialises in <strong>data</strong>. Having spent a number of years working as a full time machine learning engineer, I now work on a contract basis. 
+                            I am a software engineer that specialises in <strong>data</strong>. Having spent a number of years working as a full time machine learning engineer, I am now self-employed and work on a contract basis. 
                             I have a masters degree in computer science with a specialisation in <strong>data mining</strong>.
+                            <br><br>My contracts usually involve architecture, development, teaching or auditing.
                             I enjoy working independently and as part of a team.
                             <br>
                         </p>
@@ -212,7 +214,7 @@
                           </div>
 
                         <p class="copy">
-                            Please get in contact if you'd like to explore opportunities to work together.
+                            Please get in contact on linkedin if you'd like to explore opportunities to work together.
                         </p>
                         <p>
                             <a data-toggle="modal" data-target="#contact-form-modal" class="btn btn-primary my-2">Contact</a>
@@ -1291,8 +1293,18 @@ style="background: transparent; border-radius: 7px">
     window.onload = function () {
         document.getElementById('contact-form').addEventListener('submit', function (event) {
             event.preventDefault();
-            emailjs.sendForm('gmail', 'template_98jUsgem', '#contact-form');
-            window.alert("Thank you, your message was sent successfully.");
+            // emailjs.sendForm('gmail', 'template_98jUsgem', '#contact-form');
+            
+            this.contact_number.value = Math.random() * 100000 | 0;
+            // these IDs from the previous steps
+            emailjs.sendForm('service_3m1r6e7', 'template_98jUsgem', '#contact-form')
+            .then(function() {
+                        console.log('SUCCESS!');
+                        window.alert("Thank you, your message was sent successfully.");
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+
         });
     }
 </script>
