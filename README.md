@@ -7,7 +7,7 @@ Deployment :
 - Commit your changes from your branch, and create a pull request
 - Merge
 - After your PR is approved and merged
-- `npm run deploy`
+- `npm run deploy` will deploy on `gh-pages` branch
 
 ## What technologies are used for this project?
 
