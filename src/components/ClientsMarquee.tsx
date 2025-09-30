@@ -1,3 +1,8 @@
+import { Link, useLocation } from "react-router-dom";
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import { useRef, useState, useEffect } from "react";
+
 import airLiquide from "@/assets/clients/air-liquide.png";
 import xbto from "@/assets/clients/xbto.png";
 import creditAgricole from "@/assets/clients/credit-agricole.png";
@@ -8,11 +13,6 @@ import jedha from "@/assets/clients/jedha.png";
 import mytraffic from "@/assets/clients/mytraffic.png";
 import simudyne from "@/assets/clients/simudyne.png";
 import ubisoft from "@/assets/clients/ubisoft.svg";
-
-import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useRef, useState } from "react";
 
 const clients = [
   { name: "Simudyne", logo: simudyne },
@@ -31,56 +31,113 @@ export const ClientsMarquee = () => {
   const location = useLocation();
   const isEnglish = location.pathname.startsWith('/en');
 
-  const trackRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef(null);
+  const animationRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
 
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!trackRef.current) return;
+  // Auto-scroll avec requestAnimationFrame pour plus de fluidité
+  useEffect(() => {
+    if (!scrollRef.current || isPaused || isDragging) {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+      return;
+    }
+
+    let lastTime = performance.now();
+    const speed = 0.5; // pixels par frame
+
+    const animate = (currentTime) => {
+      if (!scrollRef.current) return;
+
+      const deltaTime = currentTime - lastTime;
+      lastTime = currentTime;
+
+      // Scroll progressif
+      scrollRef.current.scrollLeft += speed * (deltaTime / 16.67);
+
+      // Reset seamless au 1/3 du contenu
+      const oneThird = scrollRef.current.scrollWidth / 3;
+      if (scrollRef.current.scrollLeft >= oneThird) {
+        scrollRef.current.scrollLeft = scrollRef.current.scrollLeft - oneThird;
+      }
+
+      animationRef.current = requestAnimationFrame(animate);
+    };
+
+    animationRef.current = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
+    };
+  }, [isPaused, isDragging]);
+
+  const handleMouseDown = (e) => {
+    if (!scrollRef.current) return;
     setIsDragging(true);
-    setStartX(e.pageX - trackRef.current.offsetLeft);
-    setScrollLeft(trackRef.current.scrollLeft);
-    trackRef.current.style.animationPlayState = 'paused';
+    setStartX(e.pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
   };
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !trackRef.current) return;
+  const handleMouseMove = (e) => {
+    if (!isDragging || !scrollRef.current) return;
     e.preventDefault();
-    const x = e.pageX - trackRef.current.offsetLeft;
+    const x = e.pageX - scrollRef.current.offsetLeft;
     const walk = (x - startX) * 2;
-    trackRef.current.scrollLeft = scrollLeft - walk;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const handleMouseUp = () => {
-    if (!trackRef.current) return;
+    if (isDragging && scrollRef.current) {
+      // Normaliser la position après le drag
+      const oneThird = scrollRef.current.scrollWidth / 3;
+      const current = scrollRef.current.scrollLeft;
+
+      if (current < 0) {
+        scrollRef.current.scrollLeft = current + oneThird;
+      } else if (current >= oneThird * 2) {
+        scrollRef.current.scrollLeft = current - oneThird;
+      }
+    }
     setIsDragging(false);
-    trackRef.current.style.animationPlayState = 'running';
   };
 
-  const handleTouchStart = (e: React.TouchEvent) => {
-    if (!trackRef.current) return;
+  const handleTouchStart = (e) => {
+    if (!scrollRef.current) return;
     setIsDragging(true);
-    setStartX(e.touches[0].pageX - trackRef.current.offsetLeft);
-    setScrollLeft(trackRef.current.scrollLeft);
-    trackRef.current.style.animationPlayState = 'paused';
+    setStartX(e.touches[0].pageX - scrollRef.current.offsetLeft);
+    setScrollLeft(scrollRef.current.scrollLeft);
   };
 
-  const handleTouchMove = (e: React.TouchEvent) => {
-    if (!isDragging || !trackRef.current) return;
-    const x = e.touches[0].pageX - trackRef.current.offsetLeft;
+  const handleTouchMove = (e) => {
+    if (!isDragging || !scrollRef.current) return;
+    const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
     const walk = (x - startX) * 2;
-    trackRef.current.scrollLeft = scrollLeft - walk;
+    scrollRef.current.scrollLeft = scrollLeft - walk;
   };
 
   const handleTouchEnd = () => {
-    if (!trackRef.current) return;
+    if (isDragging && scrollRef.current) {
+      // Normaliser la position après le drag
+      const oneThird = scrollRef.current.scrollWidth / 3;
+      const current = scrollRef.current.scrollLeft;
+
+      if (current < 0) {
+        scrollRef.current.scrollLeft = current + oneThird;
+      } else if (current >= oneThird * 2) {
+        scrollRef.current.scrollLeft = current - oneThird;
+      }
+    }
     setIsDragging(false);
-    trackRef.current.style.animationPlayState = 'running';
   };
 
   return (
-      <section className="py-16 bg-muted/30 overflow-hidden">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">
             {isEnglish ? "They trusted me" : "Ils m'ont fait confiance"}
@@ -92,19 +149,26 @@ export const ClientsMarquee = () => {
           </p>
         </div>
 
-        <div className="relative">
+        <div className="relative overflow-hidden">
           <div
-              ref={trackRef}
-              className={`flex gap-12 animate-scroll overflow-x-auto scrollbar-hide ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
-              style={{ userSelect: 'none' }}
+              ref={scrollRef}
+              className={`flex gap-12 overflow-x-auto scrollbar-hide ${
+                  isDragging ? "cursor-grabbing" : "cursor-grab"
+              }`}
+              style={{
+                userSelect: "none"
+              }}
               onMouseDown={handleMouseDown}
               onMouseMove={handleMouseMove}
               onMouseUp={handleMouseUp}
               onMouseLeave={handleMouseUp}
+              onMouseEnter={() => setIsPaused(true)}
+              onMouseOut={() => setIsPaused(false)}
               onTouchStart={handleTouchStart}
               onTouchMove={handleTouchMove}
               onTouchEnd={handleTouchEnd}
           >
+            {/* Triple le contenu pour un scroll infini seamless */}
             {[...Array(3)].map((_, setIndex) => (
                 <div key={setIndex} className="flex gap-12 shrink-0">
                   {clients.map((client, index) => (
@@ -137,24 +201,6 @@ export const ClientsMarquee = () => {
         </div>
 
         <style>{`
-        @keyframes scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333%);
-          }
-        }
-        
-        .animate-scroll {
-          animation: scroll 30s linear infinite;
-          scroll-behavior: smooth;
-        }
-        
-        .animate-scroll:hover:not(:active) {
-          animation-play-state: paused;
-        }
-        
         .scrollbar-hide {
           -ms-overflow-style: none;
           scrollbar-width: none;
