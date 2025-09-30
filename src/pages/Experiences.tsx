@@ -91,16 +91,6 @@ const experiences = [
             { label: "En savoir plus", url: "https://medium.com/gumgum-tech/time-series-forecasting-at-scale-8201f03a3217", type: "external" },
             { label: "Étude de cas AWS", url: "https://aws.amazon.com/fr/solutions/case-studies/gumgum/", type: "external" }
         ]
-    },
-    {
-        title: "Système de Classification Vision",
-        company: "Projet Personnel",
-        date: "Fév 2020",
-        image: inferenceApiScreenshot,
-        description: "Un système de vision par ordinateur simple capable de classifier des images en 1000 catégories d'objets, comme clavier, crayon et de nombreux animaux.",
-        links: [
-            { label: "Voir l'interface", url: "http://datascience.lays.pro", type: "external" }
-        ]
     }
 ];
 

@@ -91,16 +91,6 @@ const experiences = [
             { label: "Learn more", url: "https://medium.com/gumgum-tech/time-series-forecasting-at-scale-8201f03a3217", type: "external" },
             { label: "AWS Case study", url: "https://aws.amazon.com/fr/solutions/case-studies/gumgum/", type: "external" }
         ]
-    },
-    {
-        title: "Computer Vision Classification System",
-        company: "Personal Project",
-        date: "Feb 2020",
-        image: inferenceApiScreenshot,
-        description: "A simple computer vision system able to classify images into 1000 object categories, such as keyboard, pencil, and many animals.",
-        links: [
-            { label: "Visit the UI", url: "http://datascience.lays.pro", type: "external" }
-        ]
     }
 ];
 
