@@ -169,17 +169,17 @@
             gap: 8px;
 
             padding: var(--pad-y) var(--pad-x);
-            border: none;
+            border: 1px solid rgba(139, 92, 246, 0.3);
             border-radius: var(--radius);
             font-size: var(--font-size);
             font-weight: 600;
             color: #fff;
-            background: linear-gradient(135deg,#ff00ff,#00ffff,#00ff00,#ffff00,#ff6600,#ff0000);
-            background-size: 400% 400%;
+            background: linear-gradient(135deg, #1f1f1f, #2d2d2d, #8b5cf6, #2d2d2d, #1f1f1f);
+            background-size: 300% 300%;
             cursor: pointer;
-            box-shadow: 0 0 18px rgba(255,0,255,0.6);
+            box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3);
             transition: transform .25s ease, box-shadow .25s ease;
-            animation: gradientShift 6s ease infinite, pulse 2s infinite;
+            animation: gradientShift 4s ease infinite, pulse 2s infinite;
         }
 
         .cta-fab__icon {
@@ -191,7 +191,7 @@
         @media (hover: hover) and (pointer: fine) {
             .cta-fab__btn:hover {
                 transform: scale(1.07);
-                box-shadow: 0 0 35px rgba(0,255,255,0.9);
+                box-shadow: 0 0 35px rgba(139, 92, 246, 0.7), 0 6px 16px rgba(0, 0, 0, 0.4);
             }
             .cta-fab__btn:active {
                 transform: scale(0.98);
@@ -211,8 +211,8 @@
         }
 
         @keyframes pulse {
-            0%, 100% { box-shadow: 0 0 18px rgba(255,0,255,0.6); }
-            50%      { box-shadow: 0 0 35px rgba(0,255,255,0.9); }
+            0%, 100% { box-shadow: 0 0 20px rgba(139, 92, 246, 0.4), 0 4px 12px rgba(0, 0, 0, 0.3); }
+            50%      { box-shadow: 0 0 35px rgba(139, 92, 246, 0.7), 0 6px 16px rgba(0, 0, 0, 0.4); }
         }
         @keyframes gradientShift {
             0% { background-position: 0% 50%; }
@@ -220,7 +220,6 @@
             100% { background-position: 0% 50%; }
         }
     </style>
-
     <!-- CONTACT FORM MODAL -->
     <div class="modal fade" id="contact-form-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
