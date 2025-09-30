@@ -5,8 +5,8 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import { Card } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import { Quote } from "lucide-react";
 
 import jonbaker from "@/assets/testimonials/jonbaker.jpeg";
 import azam from "@/assets/testimonials/azam.jpeg";
@@ -59,56 +59,69 @@ const testimonials = [
     text: "Cyril nous a rejoint deux semaines pour automatiser un traitement de données CRM via Python/Airflow. En s'adaptant très rapidement à nos outils ainsi qu'à nos process, il a su délivrer chaque échelon du livrable dans les temps. Les décisions techniques furent par ailleurs facilitées par une communication fluide et agréable. C'est avec plaisir que nous retravaillerions avec Cyril."
   }
 ];
+
 export const TestimonialsEN = () => {
   return (
-    <section className="py-24 bg-background">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            What my clients say
-          </h2>
-          <p className="text-xl text-muted-foreground">
-            Testimonials from professionals I've worked with
-          </p>
-        </div>
+      <section className="py-24 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              What my clients say
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Testimonials from previous clients
+            </p>
+          </div>
 
-        <div className="max-w-6xl mx-auto">
-          <Carousel
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-            className="w-full"
-          >
-            <CarouselContent className="-ml-2 md:-ml-4">
-              {testimonials.map((testimonial, index) => (
-                <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
-                  <Card className="p-6 h-full bg-card/50 backdrop-blur-sm border-2 hover:border-primary/50 transition-all">
-                    <div className="flex flex-col h-full">
-                      <div className="flex items-center gap-4 mb-4">
-                        <Avatar className="h-12 w-12">
-                          <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                          <AvatarFallback>{testimonial.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                        </Avatar>
-                        <div>
-                          <h4 className="font-bold text-sm">{testimonial.name}</h4>
-                          <p className="text-xs text-muted-foreground">{testimonial.role}</p>
-                          <p className="text-xs text-muted-foreground">{testimonial.company}</p>
-                        </div>
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed flex-grow">
-                        "{testimonial.text}"
-                      </p>
-                    </div>
-                  </Card>
-                </CarouselItem>
+          <div className="relative">
+            <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-6xl mx-auto"
+            >
+              <CarouselContent>
+                {testimonials.map((testimonial, index) => (
+                    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                      <Card className="p-6 h-full hover:shadow-xl transition-all duration-300 border-2 hover:border-primary/50 bg-card/50 backdrop-blur-sm group relative">
+                        <Quote className="w-10 h-10 text-primary/20 absolute top-4 right-4" />
+                        <CardContent className="p-0 flex flex-col h-full">
+                          <div className="flex items-center gap-4 mb-4">
+                            <img
+                                src={testimonial.image}
+                                alt={testimonial.name}
+                                className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
+                            />
+                            <div>
+                              <h3 className="font-bold text-lg">{testimonial.name}</h3>
+                              <p className="text-sm text-muted-foreground">{testimonial.position}</p>
+                              <p className="text-sm font-semibold text-primary">{testimonial.company}</p>
+                            </div>
+                          </div>
+                          <p className="text-muted-foreground leading-relaxed flex-grow">
+                            {testimonial.text}
+                          </p>
+                        </CardContent>
+                      </Card>
+                    </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/10 text-primary-foreground hover:bg-primary/40 w-10 h-10 shadow-lg z-10" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/10 text-primary-foreground hover:bg-primary/40 w-10 h-10 shadow-lg z-10" />
+            </Carousel>
+
+            <div className="flex justify-center gap-2 mt-8">
+              {testimonials.map((_, index) => (
+                  <div
+                      key={index}
+                      className="w-2 h-2 rounded-full bg-primary/20 hover:bg-primary/50 transition-colors"
+                  />
               ))}
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+            </div>
+          </div>
+
         </div>
-      </div>
-    </section>
+      </section>
   );
 };
