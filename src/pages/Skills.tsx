@@ -3,6 +3,40 @@ import { Footer } from "@/components/Footer";
 import { Database, Brain, Cog, Sparkles } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
+// LLM & GenAI Engineering
+import hfLogo from "@/assets/skills/hf_logo.png";
+import vllmLogo from "@/assets/skills/vllm.png";
+import langchainLogo from "@/assets/skills/langchain.jpg";
+import mlflowLogo from "@/assets/skills/mlflow.svg";
+import sagemakerLogo from "@/assets/skills/sagemaker_logo.png";
+import dockerLogo from "@/assets/skills/docker.svg";
+
+// Data Engineering
+import scalaLogo from "@/assets/skills/scala.svg";
+import pythonLogo from "@/assets/skills/python_logo.png";
+import sqlLogo from "@/assets/skills/sql_logo.png";
+import bashLogo from "@/assets/skills/bash_logo.png";
+import sparkLogo from "@/assets/skills/apache-spark.svg";
+import hadoopLogo from "@/assets/skills/hadoop.svg";
+import airflowLogo from "@/assets/skills/airflow.svg";
+import kafkaLogo from "@/assets/skills/apache-kafka.svg";
+import awsLogo from "@/assets/skills/aws.svg";
+import azureLogo from "@/assets/skills/microsoft-azure.svg";
+import lookerLogo from "@/assets/skills/looker.svg";
+
+// Machine Learning & Data Science
+import rLogo from "@/assets/skills/r_logo.png";
+import kerasLogo from "@/assets/skills/keras.svg";
+import sklearnLogo from "@/assets/skills/scikit-learn.svg";
+import tensorflowLogo from "@/assets/skills/tensorflow.svg";
+import opencvLogo from "@/assets/skills/open-cv.svg";
+
+// DevOps & MLOps
+import yamlLogo from "@/assets/skills/yaml_logo.png";
+import droneLogo from "@/assets/skills/drone.svg";
+import jenkinsLogo from "@/assets/skills/jenkins.svg";
+import terraformLogo from "@/assets/skills/terraform.svg";
+
 const skillCategories = [
   {
     icon: Sparkles,
@@ -17,12 +51,12 @@ const skillCategories = [
       "🎯 Fine-tuner et adapter les modèles foundation à votre domaine et cas d'usage spécifiques"
     ],
     frameworks: [
-      { name: "Hugging Face", logo: "https://www.lays.pro/assets/lays.pro/img/png/hf_logo.png" },
-      { name: "vLLM", logo: "https://www.lays.pro/assets/lays.pro/img/png/vllm.png" },
-      { name: "LangChain", logo: "https://miro.medium.com/0*k7y6OrKRXFHjFNm8.jpeg" },
-      { name: "MLflow", logo: "https://www.lays.pro/assets/lays.pro/svg/mlflow.svg" },
-      { name: "AWS Sagemaker", logo: "https://www.lays.pro/assets/lays.pro/img/png/sagemaker_logo.png" },
-      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" }
+      { name: "Hugging Face", logo: hfLogo },
+      { name: "vLLM", logo: vllmLogo },
+      { name: "LangChain", logo: langchainLogo },
+      { name: "MLflow", logo: mlflowLogo },
+      { name: "AWS Sagemaker", logo: sagemakerLogo },
+      { name: "Docker", logo: dockerLogo }
     ]
   },
   {
@@ -31,19 +65,19 @@ const skillCategories = [
     description: "Ma mission est de m'assurer que les données de votre organisation sont bien préparées, propres et fiables. Je peux vous aider à créer des pipelines de données à grande échelle qui peuvent impliquer la mise en commun de nombreux systèmes différents.",
     details: "En tant qu'ingénieur data, je peux vous aider à choisir les bons outils pour le travail et les combiner pour créer des solutions permettant les processus métier de votre entreprise avec des pipelines de données.",
     languages: [
-      { name: "Scala", logo: "https://www.lays.pro/assets/lays.pro/img/png/scala_logo.png" },
-      { name: "Python", logo: "https://www.lays.pro/assets/lays.pro/img/png/python_logo.png" },
-      { name: "SQL", logo: "https://www.lays.pro/assets/lays.pro/img/png/sql_logo.png" },
-      { name: "Bash", logo: "https://www.lays.pro/assets/lays.pro/img/png/bash_logo.png" }
+      { name: "Scala", logo: scalaLogo },
+      { name: "Python", logo: pythonLogo },
+      { name: "SQL", logo: sqlLogo },
+      { name: "Bash", logo: bashLogo }
     ],
     frameworks: [
-      { name: "Apache Spark", logo: "https://www.lays.pro/assets/lays.pro/svg/apache-spark.svg" },
-      { name: "Hadoop", logo: "https://www.lays.pro/assets/lays.pro/svg/hadoop.svg" },
-      { name: "Airflow", logo: "https://www.lays.pro/assets/lays.pro/svg/airflow.svg" },
-      { name: "Apache Kafka", logo: "https://www.lays.pro/assets/lays.pro/svg/apache-kafka.svg" },
-      { name: "AWS", logo: "https://www.lays.pro/assets/lays.pro/svg/aws.svg" },
-      { name: "Azure", logo: "https://www.lays.pro/assets/lays.pro/svg/microsoft-azure.svg" },
-      { name: "Looker", logo: "https://www.lays.pro/assets/lays.pro/svg/looker.svg" }
+      { name: "Apache Spark", logo: sparkLogo },
+      { name: "Hadoop", logo: hadoopLogo },
+      { name: "Airflow", logo: airflowLogo },
+      { name: "Apache Kafka", logo: kafkaLogo },
+      { name: "AWS", logo: awsLogo },
+      { name: "Azure", logo: azureLogo },
+      { name: "Looker", logo: lookerLogo }
     ]
   },
   {
@@ -52,15 +86,15 @@ const skillCategories = [
     description: "Ma mission est de vous aider à comprendre si et où le machine learning peut être utile pour votre entreprise, et d'implémenter les modèles et systèmes d'IA pour vous.",
     details: "En tant que data scientist, je peux vous aider à créer des pipelines de données pour le machine learning (extraction, nettoyage, augmentation) et déployer des modèles state-of-the-art adaptés à votre problématique.",
     languages: [
-      { name: "Python", logo: "https://www.lays.pro/assets/lays.pro/img/png/python_logo.png" },
-      { name: "SQL", logo: "https://www.lays.pro/assets/lays.pro/img/png/sql_logo.png" },
-      { name: "R", logo: "https://www.lays.pro/assets/lays.pro/img/png/r_logo.png" }
+      { name: "Python", logo: pythonLogo },
+      { name: "SQL", logo: sqlLogo },
+      { name: "R", logo: rLogo }
     ],
     frameworks: [
-      { name: "Keras", logo: "https://www.lays.pro/assets/lays.pro/svg/keras.svg" },
-      { name: "Scikit-learn", logo: "https://www.lays.pro/assets/lays.pro/svg/scikit-learn.svg" },
-      { name: "TensorFlow", logo: "https://www.lays.pro/assets/lays.pro/svg/tensorflow.svg" },
-      { name: "OpenCV", logo: "https://www.lays.pro/assets/lays.pro/svg/open-cv.svg" }
+      { name: "Keras", logo: kerasLogo },
+      { name: "Scikit-learn", logo: sklearnLogo },
+      { name: "TensorFlow", logo: tensorflowLogo },
+      { name: "OpenCV", logo: opencvLogo }
     ]
   },
   {
@@ -69,15 +103,15 @@ const skillCategories = [
     description: "Je peux travailler avec votre équipe pour raccourcir et optimiser le cycle de vie de vos applications, et faciliter des déploiements rapides et propres via la standardisation et l'automatisation.",
     details: "Je suis également capable d'architecturer vos systèmes en utilisant un fournisseur cloud de votre choix (AWS, GCP, Azure, IBMCloud). Si vous devez déployer des pipelines CI/CD dans votre organisation ou exposer des applications en tant que micro-services, sur site ou dans le cloud, je peux le faire pour vous.",
     languages: [
-      { name: "Python", logo: "https://www.lays.pro/assets/lays.pro/img/png/python_logo.png" },
-      { name: "Bash", logo: "https://www.lays.pro/assets/lays.pro/img/png/bash_logo.png" },
-      { name: "YAML", logo: "https://www.lays.pro/assets/lays.pro/img/png/yaml_logo.png" }
+      { name: "Python", logo: pythonLogo },
+      { name: "Bash", logo: bashLogo },
+      { name: "YAML", logo: yamlLogo }
     ],
     frameworks: [
-      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" },
-      { name: "Drone", logo: "https://www.lays.pro/assets/lays.pro/svg/drone.svg" },
-      { name: "Jenkins", logo: "https://www.lays.pro/assets/lays.pro/svg/jenkins.svg" },
-      { name: "Terraform", logo: "https://www.lays.pro/assets/lays.pro/svg/terraform.svg" }
+      { name: "Docker", logo: dockerLogo },
+      { name: "Drone", logo: droneLogo },
+      { name: "Jenkins", logo: jenkinsLogo },
+      { name: "Terraform", logo: terraformLogo }
     ]
   }
 ];

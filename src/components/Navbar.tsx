@@ -37,6 +37,11 @@ export const Navbar = () => {
     setIsOpen(false);
   };
 
+  const navigateToPage = (path: string) => {
+    navigate(path);
+    setIsOpen(false);
+  };
+
   const switchLanguage = (lang: 'fr' | 'en') => {
     if (lang === 'en') {
       navigate('/en');
@@ -47,15 +52,32 @@ export const Navbar = () => {
 
   const navItems = isEnglish
       ? [
-        { label: "Home", href: "hero" },
-        { label: "Services", href: "services" },
-        { label: "Contact", href: "contact" }
+        { label: "Home", href: "hero", type: "scroll" },
+        { label: "Services", href: "services", type: "scroll" },
+        { label: "Skills", href: "/en/skills", type: "link" },
+        { label: "Experiences", href: "/en/experiences", type: "link" },
+        { label: "Blog", href: "https://blog.lays.pro/", type: "external" },
+        { label: "Contact", href: "contact", type: "scroll" }
       ]
       : [
-        { label: "Accueil", href: "hero" },
-        { label: "Services", href: "services" },
-        { label: "Contact", href: "contact" }
+        { label: "Accueil", href: "hero", type: "scroll" },
+        { label: "Services", href: "services", type: "scroll" },
+        { label: "Compétences", href: "/skills", type: "link" },
+        { label: "Expériences", href: "/experiences", type: "link" },
+        { label: "Blog", href: "https://blog.lays.pro/", type: "external" },
+        { label: "Contact", href: "contact", type: "scroll" }
       ];
+
+  const handleNavClick = (item: typeof navItems[0]) => {
+    if (item.type === "scroll") {
+      scrollToSection(item.href);
+    } else if (item.type === "external") {
+      window.open(item.href, '_blank', 'noopener,noreferrer');
+      setIsOpen(false);
+    } else {
+      navigateToPage(item.href);
+    }
+  };
 
   return (
       <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-lg border-b border-border z-50">
@@ -87,7 +109,7 @@ export const Navbar = () => {
               {navItems.map((item) => (
                   <button
                       key={item.href}
-                      onClick={() => scrollToSection(item.href)}
+                      onClick={() => handleNavClick(item)}
                       className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                   >
                     {item.label}
@@ -133,7 +155,7 @@ export const Navbar = () => {
                 {navItems.map((item) => (
                     <button
                         key={item.href}
-                        onClick={() => scrollToSection(item.href)}
+                        onClick={() => handleNavClick(item)}
                         className="block w-full text-left px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
                     >
                       {item.label}

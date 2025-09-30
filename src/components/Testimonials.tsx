@@ -85,8 +85,8 @@ export const Testimonials = () => {
                   <Quote className="w-10 h-10 text-primary/20 absolute top-4 right-4" />
                   <CardContent className="p-0 flex flex-col h-full">
                     <div className="flex items-center gap-4 mb-4">
-                      <img 
-                        src={testimonial.image} 
+                      <img
+                        src={testimonial.image}
                         alt={testimonial.name}
                         className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
                       />
@@ -107,6 +107,7 @@ export const Testimonials = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
+
       </div>
     </section>
   );

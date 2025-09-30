@@ -11,8 +11,8 @@ import {
 const services = [
   {
     icon: Brain,
-    title: "RAG Systems & Knowledge Bases",
-    description: "Création de systèmes IA intelligents qui comprennent vos **données d'entreprise**. **Pipelines RAG** connectant les **LLMs** à vos documents et **bases de connaissances internes**."
+    title: "Systèmes RAG",
+    description: "Création de systèmes IA intelligents qui comprennent vos **données d'entreprise**. **Pipelines RAG** connectant les **LLMs** à vos documents et toutes vos **sources internes**."
   },
   {
     icon: Sparkles,
