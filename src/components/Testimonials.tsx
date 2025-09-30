@@ -35,7 +35,7 @@ const testimonials = [
     position: "Product Line Manager Datalake",
     company: "Air Liquide",
     image: "https://www.lays.pro/assets/lays.pro/img/samuel.png",
-    text: "Cyril à été d'une très grande aide dans la réalisation de notre projet d'API data. Il a mis en place toute la stack technique en IaC, du développement à la production ainsi que l'implémentation à partir de la spécification fonctionnelle et au passage le pipeline d'alimentation des données avec les transformations métier. Aujourd'hui elle est déjà utilisée par plusieurs applications. Cyril est déterminé et efficace dans son travail et sait communiquer. Il est un vrai atout pour toute équipe. Je recommande et espère pouvoir travailler de nouveau avec lui."
+    text: "Cyril a été d'une très grande aide dans la réalisation de notre projet d'API data. Il a mis en place toute la stack technique en IaC, du développement à la production ainsi que l'implémentation à partir de la spécification fonctionnelle et au passage le pipeline d'alimentation des données avec les transformations métier. Aujourd'hui elle est déjà utilisée par plusieurs applications. Cyril est déterminé et efficace dans son travail et sait communiquer. Il est un vrai atout pour toute équipe. Je recommande et espère pouvoir travailler de nouveau avec lui."
   },
   {
     name: "Alexandre J.",

@@ -5,6 +5,27 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const skillCategories = [
   {
+    icon: Sparkles,
+    title: "LLM & GenAI Engineering",
+    description: "En tant qu'ingénieur LLM/GenAI, je peux déployer les derniers LLMs open-source dans le cloud ou on-site, concevoir et déployer des applications LLM end-to-end et des systèmes RAG.",
+    details: "Par exemple, je vous aide à  :",
+    capabilities: [
+      "🚀 Déployer les derniers LLMs open-source dans le cloud ou sur site, en tant qu'APIs ou chatbots",
+      "🧩 Concevoir, architecturer et déployer des applications LLM end-to-end et des systèmes RAG",
+      "📈 Booster la productivité de vos data scientists avec des outils MLOps/LLMOps",
+      "⚡️ Optimiser les performances d'inférence avec la quantization de modèles et un serving efficace",
+      "🎯 Fine-tuner et adapter les modèles foundation à votre domaine et cas d'usage spécifiques"
+    ],
+    frameworks: [
+      { name: "Hugging Face", logo: "https://www.lays.pro/assets/lays.pro/img/png/hf_logo.png" },
+      { name: "vLLM", logo: "https://www.lays.pro/assets/lays.pro/img/png/vllm.png" },
+      { name: "LangChain", logo: "https://miro.medium.com/0*k7y6OrKRXFHjFNm8.jpeg" },
+      { name: "MLflow", logo: "https://www.lays.pro/assets/lays.pro/svg/mlflow.svg" },
+      { name: "AWS Sagemaker", logo: "https://www.lays.pro/assets/lays.pro/img/png/sagemaker_logo.png" },
+      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" }
+    ]
+  },
+  {
     icon: Database,
     title: "Data Engineering",
     description: "Ma mission est de m'assurer que les données de votre organisation sont bien préparées, propres et fiables. Je peux vous aider à créer des pipelines de données à grande échelle qui peuvent impliquer la mise en commun de nombreux systèmes différents.",
@@ -58,27 +79,6 @@ const skillCategories = [
       { name: "Jenkins", logo: "https://www.lays.pro/assets/lays.pro/svg/jenkins.svg" },
       { name: "Terraform", logo: "https://www.lays.pro/assets/lays.pro/svg/terraform.svg" }
     ]
-  },
-  {
-    icon: Sparkles,
-    title: "LLM & GenAI Engineering",
-    description: "En tant qu'ingénieur LLM/GenAI, je peux déployer les derniers LLMs open-source dans le cloud ou sur site, concevoir et déployer des applications LLM end-to-end et des systèmes RAG.",
-    details: "Je peux également optimiser les performances d'inférence avec la quantization de modèles et un serving efficace, et fine-tuner et adapter les modèles foundation à votre domaine et cas d'usage spécifiques.",
-    capabilities: [
-      "🚀 Déployer les derniers LLMs open-source dans le cloud ou sur site, en tant qu'APIs ou chatbots",
-      "🧩 Concevoir, architecturer et déployer des applications LLM end-to-end et des systèmes RAG",
-      "📈 Booster la productivité de vos data scientists avec des outils MLOps/LLMOps",
-      "⚡️ Optimiser les performances d'inférence avec la quantization de modèles et un serving efficace",
-      "🎯 Fine-tuner et adapter les modèles foundation à votre domaine et cas d'usage spécifiques"
-    ],
-    frameworks: [
-      { name: "Hugging Face", logo: "https://www.lays.pro/assets/lays.pro/img/png/hf_logo.png" },
-      { name: "vLLM", logo: "https://www.lays.pro/assets/lays.pro/img/png/vllm.png" },
-      { name: "LangChain", logo: "https://miro.medium.com/0*k7y6OrKRXFHjFNm8.jpeg" },
-      { name: "MLflow", logo: "https://www.lays.pro/assets/lays.pro/svg/mlflow.svg" },
-      { name: "AWS Sagemaker", logo: "https://www.lays.pro/assets/lays.pro/img/png/sagemaker_logo.png" },
-      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" }
-    ]
   }
 ];
 
@@ -94,7 +94,7 @@ const Skills = () => {
                 Mes Compétences
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Je suis un spécialiste des systèmes back-end et expert en données. J'ai également de l'expérience en tant qu'ingénieur full stack et je peux rapidement apprendre de nouvelles technologies.
+                Je suis un spécialiste des systèmes data et back-end. Je peux cependant être full stack et apprendre le bon outil pour le bon besoin.
               </p>
             </div>
 

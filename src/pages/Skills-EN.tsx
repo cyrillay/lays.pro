@@ -5,6 +5,44 @@ import { Card } from "@/components/ui/card";
 
 const skillCategories = [
   {
+    icon: Sparkles,
+    title: "LLM & GenAI Engineering",
+    description: "As an LLM/GenAI engineer, I can deploy the latest open-source LLMs in the cloud or on-premise, design and deploy end-to-end LLM applications and RAG systems.",
+    details: "I can also optimize inference performance with model quantization and efficient serving, and fine-tune and adapt foundation models to your specific domain and use cases.",
+    capabilities: [
+      "🚀 Deploy the latest open-source LLMs in the cloud or on-premise, as APIs or chatbots",
+      "🧩 Design, architect and deploy end-to-end LLM applications and RAG systems",
+      "📈 Boost your data scientists' productivity with MLOps/LLMOps tools",
+      "⚡️ Optimize inference performance with model quantization and efficient serving",
+      "🎯 Fine-tune and adapt foundation models to your specific domain and use cases"
+    ],
+    frameworks: [
+      { name: "Hugging Face", logo: "https://www.lays.pro/assets/lays.pro/img/png/hf_logo.png" },
+      { name: "vLLM", logo: "https://www.lays.pro/assets/lays.pro/img/png/vllm.png" },
+      { name: "LangChain", logo: "https://miro.medium.com/0*k7y6OrKRXFHjFNm8.jpeg" },
+      { name: "MLflow", logo: "https://www.lays.pro/assets/lays.pro/svg/mlflow.svg" },
+      { name: "AWS Sagemaker", logo: "https://www.lays.pro/assets/lays.pro/img/png/sagemaker_logo.png" },
+      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" }
+    ]
+  },
+  {
+    icon: Cog,
+    title: "DevOps & MLOps",
+    description: "I can work with your team to shorten and optimize your application lifecycle, and facilitate fast and clean deployments through standardization and automation.",
+    details: "I'm also able to architect your systems using a cloud provider of your choice (AWS, GCP, Azure, IBMCloud). If you need to deploy CI/CD pipelines in your organization or expose applications as microservices, on-premise or in the cloud, I can do it for you.",
+    languages: [
+      { name: "Python", logo: "https://www.lays.pro/assets/lays.pro/img/png/python_logo.png" },
+      { name: "Bash", logo: "https://www.lays.pro/assets/lays.pro/img/png/bash_logo.png" },
+      { name: "YAML", logo: "https://www.lays.pro/assets/lays.pro/img/png/yaml_logo.png" }
+    ],
+    frameworks: [
+      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" },
+      { name: "Drone", logo: "https://www.lays.pro/assets/lays.pro/svg/drone.svg" },
+      { name: "Jenkins", logo: "https://www.lays.pro/assets/lays.pro/svg/jenkins.svg" },
+      { name: "Terraform", logo: "https://www.lays.pro/assets/lays.pro/svg/terraform.svg" }
+    ]
+  },
+  {
     icon: Database,
     title: "Data Engineering",
     description: "My mission is to ensure that your organization's data is well-prepared, clean, and reliable. I can help you create large-scale data pipelines that may involve pooling many different systems.",
@@ -40,44 +78,6 @@ const skillCategories = [
       { name: "Scikit-learn", logo: "https://www.lays.pro/assets/lays.pro/svg/scikit-learn.svg" },
       { name: "TensorFlow", logo: "https://www.lays.pro/assets/lays.pro/svg/tensorflow.svg" },
       { name: "OpenCV", logo: "https://www.lays.pro/assets/lays.pro/svg/open-cv.svg" }
-    ]
-  },
-  {
-    icon: Cog,
-    title: "DevOps & MLOps",
-    description: "I can work with your team to shorten and optimize your application lifecycle, and facilitate fast and clean deployments through standardization and automation.",
-    details: "I'm also able to architect your systems using a cloud provider of your choice (AWS, GCP, Azure, IBMCloud). If you need to deploy CI/CD pipelines in your organization or expose applications as microservices, on-premise or in the cloud, I can do it for you.",
-    languages: [
-      { name: "Python", logo: "https://www.lays.pro/assets/lays.pro/img/png/python_logo.png" },
-      { name: "Bash", logo: "https://www.lays.pro/assets/lays.pro/img/png/bash_logo.png" },
-      { name: "YAML", logo: "https://www.lays.pro/assets/lays.pro/img/png/yaml_logo.png" }
-    ],
-    frameworks: [
-      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" },
-      { name: "Drone", logo: "https://www.lays.pro/assets/lays.pro/svg/drone.svg" },
-      { name: "Jenkins", logo: "https://www.lays.pro/assets/lays.pro/svg/jenkins.svg" },
-      { name: "Terraform", logo: "https://www.lays.pro/assets/lays.pro/svg/terraform.svg" }
-    ]
-  },
-  {
-    icon: Sparkles,
-    title: "LLM & GenAI Engineering",
-    description: "As an LLM/GenAI engineer, I can deploy the latest open-source LLMs in the cloud or on-premise, design and deploy end-to-end LLM applications and RAG systems.",
-    details: "I can also optimize inference performance with model quantization and efficient serving, and fine-tune and adapt foundation models to your specific domain and use cases.",
-    capabilities: [
-      "🚀 Deploy the latest open-source LLMs in the cloud or on-premise, as APIs or chatbots",
-      "🧩 Design, architect and deploy end-to-end LLM applications and RAG systems",
-      "📈 Boost your data scientists' productivity with MLOps/LLMOps tools",
-      "⚡️ Optimize inference performance with model quantization and efficient serving",
-      "🎯 Fine-tune and adapt foundation models to your specific domain and use cases"
-    ],
-    frameworks: [
-      { name: "Hugging Face", logo: "https://www.lays.pro/assets/lays.pro/img/png/hf_logo.png" },
-      { name: "vLLM", logo: "https://www.lays.pro/assets/lays.pro/img/png/vllm.png" },
-      { name: "LangChain", logo: "https://miro.medium.com/0*k7y6OrKRXFHjFNm8.jpeg" },
-      { name: "MLflow", logo: "https://www.lays.pro/assets/lays.pro/svg/mlflow.svg" },
-      { name: "AWS Sagemaker", logo: "https://www.lays.pro/assets/lays.pro/img/png/sagemaker_logo.png" },
-      { name: "Docker", logo: "https://www.lays.pro/assets/lays.pro/svg/docker.svg" }
     ]
   }
 ];
@@ -141,11 +141,11 @@ const SkillsEN = () => {
                             </h3>
                             <div className="flex flex-wrap gap-4">
                               {category.languages.map((lang, idx) => (
-                                <div key={idx} className="flex items-center gap-2 p-3 rounded-lg bg-muted/50 hover:bg-muted transition-colors">
+                                <div key={idx} className="flex items-center gap-2 p-3 rounded-lg bg-muted/80 hover:bg-muted transition-colors">
                                   <img 
                                     src={lang.logo} 
                                     alt={lang.name}
-                                    className="h-8 w-8 object-contain"
+                                    className="h-10 w-10 object-contain"
                                   />
                                 </div>
                               ))}

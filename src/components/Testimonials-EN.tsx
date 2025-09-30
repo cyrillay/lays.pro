@@ -10,46 +10,46 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    name: "Marouane Mouttaki",
-    role: "Senior Data Engineer",
-    company: "Air Liquide",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQGV4gC8kHMXEA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1631697486892?e=1741219200&v=beta&t=xHhY6kNBDUZYYo-rGu63Qcry2BkIU_-wJ9hCiLjvQSY",
-    text: "Cyril is an excellent data engineer with strong skills across the entire data pipeline. He's also a great team player, always available to share his knowledge."
+    name: "Jonathan B.",
+    position: "COO",
+    company: "Simudyne",
+    image: "https://www.lays.pro/assets/lays.pro/img/jonbaker.jpeg",
+    text: "Cyril enthusiastically approaches complex problems and is able to think through them clearly. He is a good listener and is able to explain complicated ideas succinctly to team members on the business and technical sides. Cyril was also involved in some presentations to partners and clients where he represented the company very well. Cyril is a promising machine learning engineer and I would gladly work with him again in the future."
   },
   {
-    name: "Antoine Sipolla",
-    role: "Head of Data Science",
-    company: "Crédit Agricole",
-    image: "https://media.licdn.com/dms/image/v2/C5603AQG6ZIbVQOw5Aw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1599668933621?e=1741219200&v=beta&t=8qCKYL-R4SFlJgVhUE0hA_jg0xVlD1FdXpC1i29pUPo",
-    text: "Cyril is a very skilled data engineer who can handle projects from A to Z: from requirements gathering and solution design to delivery. He's also a good communicator, which is increasingly rare in the industry."
+    name: "Azam A.",
+    position: "Senior Data Engineer",
+    company: "Gumgum",
+    image: "https://www.lays.pro/assets/lays.pro/img/azam.jpeg",
+    text: "At Gumgum, Cyril was working with me on data-engineering and backend development. He started as an intern, and quickly showed great aptitude and a drive for results. Eventually becoming a full time member of the team, he consistently produced results and became a key asset. I would work with him again and recommend him to any software engineering or data related role."
   },
   {
-    name: "Clément Chantreuil",
-    role: "Chief Data Officer",
-    company: "Medissimo",
-    image: "https://media.licdn.com/dms/image/v2/C4D03AQGvgW9jH6_oFw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1570525837267?e=1741219200&v=beta&t=jcljWU4gSpYTH5vxrMpL5gn2FxaXfK1nHgJUIWMq9Vw",
-    text: "Cyril is a top-notch data engineer with in-depth knowledge of the entire data stack and MLOps. He's very autonomous, proactive, and has a great sense of communication. It's a pleasure to work with him!"
-  },
-  {
-    name: "Romain Graux",
-    role: "Machine Learning Engineer",
-    company: "ManoMano",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQHXPihMlY2E4Q/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1689763843835?e=1741219200&v=beta&t=4XBY7GgVJyJBz4fQ3rq8EQNBs0vu_oG0H1r4aBRO7kA",
-    text: "Cyril is an exceptional data engineer who can handle multiple subjects simultaneously. He has a global vision of data projects and always seeks the best solutions. His rigor and professionalism make him a valuable asset."
-  },
-  {
-    name: "Dylan Tientcheu",
-    role: "Senior Data Analyst",
-    company: "GumGum",
-    image: "https://media.licdn.com/dms/image/v2/D4E03AQHrH1JvqJh5ig/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1698252488634?e=1741219200&v=beta&t=jVRQqNwHdJMWL1AUgHUExgSQvvjMfJ0D9NTa5jsCWpQ",
-    text: "Cyril is a data engineer who doesn't settle for doing the minimum. He always seeks the best solution, both technically and from a user experience perspective. He's passionate and very pleasant to work with."
-  },
-  {
-    name: "Marc Chouraki",
-    role: "Head of Data",
+    name: "Antoine W.",
+    position: "Senior Software Engineer",
     company: "MyTraffic",
-    image: "https://media.licdn.com/dms/image/v2/C4E03AQHhR0hbh9MxiQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1643105046547?e=1741219200&v=beta&t=YJPKXDQcQZg01OJNyiHyLBrQFCjKjKZBdSKRiCmFOHw",
-    text: "I had the pleasure of working with Cyril for over a year. He's a top-tier data engineer with a broad skill set. He's autonomous, efficient, and always has a friendly word. A great professional!"
+    image: "https://www.lays.pro/assets/lays.pro/img/antoine.jpeg",
+    text: "J'ai eu le plaisir de travailler avec Cyril sur des projets de data engineering pendant 3 mois à MyTraffic. Ca a été un plaisir: Cyril est à la fois curieux et rigoureux, il vise la perfection tout en gardant les impératifs business en tête. Il n'a jamais hésité à \"mettre les mains dans le cambouis\" et à monter en compétences sur certaines parties du produit moins axées data engineering. Et en bonus: il est super sympa ! Je suis convaincu que, grâce à ses qualités ainsi que ses capacités de raisonnement et de communication, Cyril saura relever tout défi tech qui se présente à lui."
+  },
+  {
+    name: "Samuel K.",
+    position: "Product Line Manager Datalake",
+    company: "Air Liquide",
+    image: "https://www.lays.pro/assets/lays.pro/img/samuel.png",
+    text: "Cyril a été d'une très grande aide dans la réalisation de notre projet d'API data. Il a mis en place toute la stack technique en IaC, du développement à la production ainsi que l'implémentation à partir de la spécification fonctionnelle et au passage le pipeline d'alimentation des données avec les transformations métier. Aujourd'hui elle est déjà utilisée par plusieurs applications. Cyril est déterminé et efficace dans son travail et sait communiquer. Il est un vrai atout pour toute équipe. Je recommande et espère pouvoir travailler de nouveau avec lui."
+  },
+  {
+    name: "Alexandre J.",
+    position: "Head of Product",
+    company: "Medissimo",
+    image: "https://www.lays.pro/assets/lays.pro/img/alexandre.jpeg",
+    text: "Cyril est intervenu chez Medissimo pour mettre en place un module analytique utilisant nos bases de données. En amont de la mission, il nous a conseillé sur la solution la plus adaptée, et a su l'intégrer efficacement à nos infrastructures existantes. Cyril a aussi réalisé une formation en présentiel sur des méthodes et bonnes pratiques data qui ont débloqué et facilité un projet de back-office. Cyril connaît son sujet et c'est avec plaisir que nous retravaillerons avec lui."
+  },
+  {
+    name: "Victor H.",
+    position: "Senior Growth Engineer",
+    company: "ManoMano",
+    image: "https://www.lays.pro/assets/lays.pro/img/victor.jpeg",
+    text: "Cyril nous a rejoint deux semaines pour automatiser un traitement de données CRM via Python/Airflow. En s'adaptant très rapidement à nos outils ainsi qu'à nos process, il a su délivrer chaque échelon du livrable dans les temps. Les décisions techniques furent par ailleurs facilitées par une communication fluide et agréable. C'est avec plaisir que nous retravaillerions avec Cyril."
   }
 ];
 
