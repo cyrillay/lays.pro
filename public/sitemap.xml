@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.lays.pro/</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/en</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/skills</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/skills"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/skills"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/en/skills</loc>
+    <lastmod>2025-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/skills"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/skills"/>
+  </url>
+</urlset>
