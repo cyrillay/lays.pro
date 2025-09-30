@@ -2,13 +2,17 @@ import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { useState } from "react";
 
 // Import images
 import oglSvg from "@/assets/experiences/ogl.svg";
 import sagemakerkubeflowmetaflow3 from "@/assets/experiences/sagemakerkubeflowmetaflow3.png";
 import cyrilformation from "@/assets/experiences/cyrilformation.png";
 import isochrone from "@/assets/experiences/isochrone.png";
+import footfallWeek from "@/assets/experiences/footfall-week.png";
+import canibMonth from "@/assets/experiences/canib-month.png";
+import footfallYear from "@/assets/experiences/footfall-year.png";
 import gumgumPipeline from "@/assets/experiences/gumgum-pipeline.png";
 import cruiseControl from "@/assets/experiences/cruise-control.jpg";
 import gumgumForecasting from "@/assets/experiences/gumgum-forecasting.png";
@@ -51,6 +55,7 @@ const experiences = [
         company: "MyTraffic",
         date: "Jan 2020",
         image: isochrone,
+        images: [isochrone, footfallWeek, canibMonth, footfallYear],
         description: "At MyTraffic, I implemented data science models at high scale, and deployed them on the cloud for pedestrian traffic insights.",
         links: [
             { label: "Learn more", url: "https://www.mytraffic.io/", type: "external" }
@@ -100,6 +105,9 @@ const experiences = [
 ];
 
 const ExperiencesEN = () => {
+    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
     return (
         <div className="min-h-screen">
             <Navbar />
@@ -121,14 +129,63 @@ const ExperiencesEN = () => {
                                     key={index}
                                     className="overflow-hidden border-2 hover:border-primary/50 transition-all duration-300 bg-card/50 backdrop-blur-sm hover:shadow-xl group"
                                 >
-                                    <div className="relative h-48 overflow-hidden">
-                                        <img
-                                            src={experience.image}
-                                            alt={experience.title}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                            style={experience.backgroundColor ? { backgroundColor: experience.backgroundColor } : {}}
-                                        />
-                                    </div>
+                                    {experience.images ? (
+                                        <div className="relative h-56 overflow-hidden bg-muted/30">
+                                            <div className="relative h-full">
+                                                <img
+                                                    src={experience.images[currentImageIndex]}
+                                                    alt={`${experience.title} - Image ${currentImageIndex + 1}`}
+                                                    className="w-full h-full object-contain cursor-pointer transition-transform duration-300"
+                                                    onClick={() => setSelectedImage(experience.images![currentImageIndex])}
+                                                />
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setCurrentImageIndex((prev) =>
+                                                            prev === 0 ? experience.images!.length - 1 : prev - 1
+                                                        );
+                                                    }}
+                                                    className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                                                >
+                                                    <ChevronLeft className="w-5 h-5" />
+                                                </button>
+                                                <button
+                                                    onClick={(e) => {
+                                                        e.stopPropagation();
+                                                        setCurrentImageIndex((prev) =>
+                                                            prev === experience.images!.length - 1 ? 0 : prev + 1
+                                                        );
+                                                    }}
+                                                    className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-colors"
+                                                >
+                                                    <ChevronRight className="w-5 h-5" />
+                                                </button>
+                                                <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-2">
+                                                    {experience.images.map((_, imgIndex) => (
+                                                        <button
+                                                            key={imgIndex}
+                                                            onClick={(e) => {
+                                                                e.stopPropagation();
+                                                                setCurrentImageIndex(imgIndex);
+                                                            }}
+                                                            className={`w-2 h-2 rounded-full transition-colors ${
+                                                                imgIndex === currentImageIndex ? 'bg-primary' : 'bg-white/50'
+                                                            }`}
+                                                        />
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    ) : (
+                                        <div className="relative h-56 overflow-hidden">
+                                            <img
+                                                src={experience.image}
+                                                alt={experience.title}
+                                                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
+                                                style={experience.backgroundColor ? { backgroundColor: experience.backgroundColor } : {}}
+                                            />
+                                        </div>
+                                    )}
                                     <CardContent className="p-6 space-y-4">
                                         <div>
                                             <h3 className="text-xl font-bold mb-2">{experience.title}</h3>
@@ -175,6 +232,27 @@ const ExperiencesEN = () => {
                 </section>
             </main>
             <Footer />
+
+            {/* Modal to display enlarged image */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 bg-black/90 z-50 flex items-center justify-center p-4"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button
+                        onClick={() => setSelectedImage(null)}
+                        className="absolute top-4 right-4 text-white hover:text-gray-300 transition-colors"
+                    >
+                        <X className="w-8 h-8" />
+                    </button>
+                    <img
+                        src={selectedImage}
+                        alt="Enlarged view"
+                        className="max-w-full max-h-full object-contain"
+                        onClick={(e) => e.stopPropagation()}
+                    />
+                </div>
+            )}
         </div>
     );
 };
