@@ -1,12 +1,9 @@
-# lays.pro
+# [lays.pro](https://www.lays.pro)
 Professional website
 
 Deployment :
 
-- Create a branch from master
-- Commit your changes from your branch, and create a pull request
-- Merge
-- After your PR is approved and merged
+- Push on master like the thug you are
 - `npm run deploy` will deploy on `gh-pages` branch
 
 ## What technologies are used for this project?
