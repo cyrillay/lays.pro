@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Linkedin, Github, Send } from "lucide-react";
+import { Card } from "@/components/ui/card";
+import { Send } from "lucide-react";
 import { useState, useRef } from "react";
 import emailjs from '@emailjs/browser';
 
@@ -20,7 +21,6 @@ export const ContactEN = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    // Simple validation
     if (!formData.name || !formData.email || !formData.full_message) {
       alert("Please fill in all required fields");
       return;
@@ -29,18 +29,16 @@ export const ContactEN = () => {
     setIsSubmitting(true);
 
     try {
-      // Replace these with your EmailJS credentials
       const result = await emailjs.sendForm(
-          'service_3m1r6e7',    // Replace with your service ID
-          'template_98jUsgem',   // Replace with your template ID
+          'service_3m1r6e7',
+          'template_98jUsgem',
           formRef.current!,
-          'user_8lWdMVJ8JBqkAbfW5nP9i'     // Replace with your public key
+          'user_8lWdMVJ8JBqkAbfW5nP9i'
       );
 
       console.log('Email sent successfully:', result.text);
       alert("Message sent! I'll get back to you soon.");
 
-      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -58,21 +56,20 @@ export const ContactEN = () => {
   };
 
   return (
-      <section id="contact" className="py-24 bg-background">
+      <section id="contact" className="py-24 bg-gradient-to-br from-background via-background to-primary/5">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
+            <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold mb-4">
                 Let's work together
               </h2>
               <p className="text-xl text-muted-foreground">
-                Ready to transform your data into competitive advantage?
+                Do you have a data or AI project? Let's talk about it.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-12">
-              {/* Contact Form */}
-              <div>
+            <div className="flex justify-center">
+              <Card className="p-8 bg-card/50 backdrop-blur-sm w-full">
                 <form
                     ref={formRef}
                     id="contact-form"
@@ -82,59 +79,79 @@ export const ContactEN = () => {
                   <input type="hidden" name="contact_number" />
 
                   <div>
+                    <label htmlFor="name" className="block text-sm font-medium mb-2">
+                      Full name *
+                    </label>
                     <Input
+                        id="name"
                         name="name"
                         type="text"
-                        placeholder="Your name"
-                        className="bg-card/50"
+                        placeholder="John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                        className="bg-background"
                         required
                     />
                   </div>
 
                   <div>
+                    <label htmlFor="email" className="block text-sm font-medium mb-2">
+                      Email *
+                    </label>
                     <Input
+                        id="email"
                         name="email"
                         type="email"
-                        placeholder="Your email"
-                        className="bg-card/50"
+                        placeholder="john.doe@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="bg-background"
                         required
                     />
                   </div>
 
                   <div>
+                    <label htmlFor="phone" className="block text-sm font-medium mb-2">
+                      Phone
+                    </label>
                     <Input
+                        id="phone"
                         name="phone"
                         type="tel"
-                        placeholder="Your phone number"
-                        className="bg-card/50"
+                        placeholder="+1 234 567 890"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="bg-background"
                     />
                   </div>
 
                   <div>
+                    <label htmlFor="company" className="block text-sm font-medium mb-2">
+                      Company
+                    </label>
                     <Input
+                        id="company"
                         name="company"
                         type="text"
                         placeholder="Your company"
-                        className="bg-card/50"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        className="bg-background"
                     />
                   </div>
 
                   <div>
+                    <label htmlFor="interest" className="block text-sm font-medium mb-2">
+                      Interested in
+                    </label>
                     <select
+                        id="interest"
                         name="interest"
                         value={formData.interest}
                         onChange={(e) => setFormData({ ...formData, interest: e.target.value })}
-                        className="flex h-10 w-full rounded-md border border-input bg-card/50 px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                        className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     >
-                      <option value="" disabled>Interested in</option>
+                      <option value="" disabled>Select an option</option>
                       <option value="ML Engineering services">ML Engineering services</option>
                       <option value="Data engineering services">Data engineering services</option>
                       <option value="Data science services">Data science services</option>
@@ -143,12 +160,17 @@ export const ContactEN = () => {
                   </div>
 
                   <div>
+                    <label htmlFor="full_message" className="block text-sm font-medium mb-2">
+                      Message *
+                    </label>
                     <Textarea
+                        id="full_message"
                         name="full_message"
-                        placeholder="Your message"
-                        className="min-h-[150px] bg-card/50 resize-none"
+                        placeholder="Tell me about your project..."
+                        rows={6}
                         value={formData.full_message}
                         onChange={(e) => setFormData({ ...formData, full_message: e.target.value })}
+                        className="bg-background resize-none"
                         required
                     />
                   </div>
@@ -165,49 +187,7 @@ export const ContactEN = () => {
                     <Send className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </form>
-              </div>
-
-              {/* Contact Info */}
-              <div className="space-y-8">
-                <div>
-                  <h3 className="text-2xl font-bold mb-6">Contact information</h3>
-                  <div className="space-y-4">
-                    <a
-                        href="mailto:contact@lays.pro"
-                        className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Mail className="w-5 h-5" />
-                      contact@lays.pro
-                    </a>
-                    <a
-                        href="https://www.linkedin.com/in/cyril-lay-2017/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Linkedin className="w-5 h-5" />
-                      LinkedIn
-                    </a>
-                    <a
-                        href="https://github.com/cyrillay"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      <Github className="w-5 h-5" />
-                      GitHub
-                    </a>
-                  </div>
-                </div>
-
-                <div>
-                  <h3 className="text-xl font-bold mb-4">Availability</h3>
-                  <p className="text-muted-foreground">
-                    Available for freelance missions and consulting.
-                    Response within 24-48 hours.
-                  </p>
-                </div>
-              </div>
+              </Card>
             </div>
           </div>
         </div>

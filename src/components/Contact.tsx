@@ -87,64 +87,10 @@ export const Contact = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {/* Contact Info */}
-              <div className="space-y-6">
-                <Card className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                      <Mail className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">Email</h3>
-                      <a href="mailto:contact@lays.pro" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                        contact@lays.pro
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                      <Linkedin className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">LinkedIn</h3>
-                      <a
-                          href="https://www.linkedin.com/in/cyril-lay-2017/"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Connectez-vous
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-
-                <Card className="p-6 hover:shadow-lg transition-all bg-card/50 backdrop-blur-sm">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10">
-                      <Github className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold mb-1">GitHub</h3>
-                      <a
-                          href="https://github.com/cyrillay"
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                      >
-                        Voir mes projets
-                      </a>
-                    </div>
-                  </div>
-                </Card>
-              </div>
+            <div className="flex justify-center">
 
               {/* Contact Form - Matching old structure for EmailJS/GTM */}
-              <Card className="md:col-span-2 p-8 bg-card/50 backdrop-blur-sm">
+              <Card className="p-8 bg-card/50 backdrop-blur-sm w-full">
                 <form
                     ref={formRef}
                     id="contact-form"
