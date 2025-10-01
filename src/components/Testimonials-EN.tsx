@@ -4,9 +4,11 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Quote } from "lucide-react";
+import { useEffect, useState } from "react";
 
 import jonbaker from "@/assets/testimonials/jonbaker.jpeg";
 import azam from "@/assets/testimonials/azam.jpeg";
@@ -35,32 +37,47 @@ const testimonials = [
     position: "Senior Software Engineer",
     company: "MyTraffic",
     image: antoine,
-    text: "J'ai eu le plaisir de travailler avec Cyril sur des projets de data engineering pendant 3 mois à MyTraffic. Ca a été un plaisir: Cyril est à la fois curieux et rigoureux, il vise la perfection tout en gardant les impératifs business en tête. Il n'a jamais hésité à \"mettre les mains dans le cambouis\" et à monter en compétences sur certaines parties du produit moins axées data engineering. Et en bonus: il est super sympa ! Je suis convaincu que, grâce à ses qualités ainsi que ses capacités de raisonnement et de communication, Cyril saura relever tout défi tech qui se présente à lui."
+    text: "I had the pleasure of working with Cyril on data engineering projects for 3 months at MyTraffic. It was a real pleasure: Cyril is both curious and rigorous, aiming for perfection while keeping business constraints in mind. He never hesitated to get his hands dirty and ramp up on parts of the product less focused on data engineering. And as a bonus: he's super nice! I'm convinced that thanks to his qualities as well as his reasoning and communication skills, Cyril will be able to take on any tech challenge."
   },
   {
     name: "Samuel K.",
     position: "Product Line Manager Datalake",
     company: "Air Liquide",
     image: samuel,
-    text: "Cyril a été d'une très grande aide dans la réalisation de notre projet d'API data. Il a mis en place toute la stack technique en IaC, du développement à la production ainsi que l'implémentation à partir de la spécification fonctionnelle et au passage le pipeline d'alimentation des données avec les transformations métier. Aujourd'hui elle est déjà utilisée par plusieurs applications. Cyril est déterminé et efficace dans son travail et sait communiquer. Il est un vrai atout pour toute équipe. Je recommande et espère pouvoir travailler de nouveau avec lui."
+    text: "Cyril was of great help in the realization of our data API project. He set up the entire technical stack in IaC, from development to production as well as the implementation from the functional specification and the data ingestion pipeline with business transformations. Today it is already used by several applications. Cyril is determined, efficient, and knows how to communicate. He is a real asset to any team. I recommend him and hope to work with him again."
   },
   {
     name: "Alexandre J.",
     position: "Head of Product",
     company: "Medissimo",
     image: alexandre,
-    text: "Cyril est intervenu chez Medissimo pour mettre en place un module analytique utilisant nos bases de données. En amont de la mission, il nous a conseillé sur la solution la plus adaptée, et a su l'intégrer efficacement à nos infrastructures existantes. Cyril a aussi réalisé une formation en présentiel sur des méthodes et bonnes pratiques data qui ont débloqué et facilité un projet de back-office. Cyril connaît son sujet et c'est avec plaisir que nous retravaillerons avec lui."
+    text: "Cyril worked at Medissimo to implement an analytics module using our databases. Before the mission, he advised us on the most suitable solution, and integrated it effectively into our existing infrastructures. Cyril also conducted an in-person training on data methods and best practices that unblocked and facilitated a back-office project. Cyril knows his subject and it will be a pleasure to work with him again."
   },
   {
     name: "Victor H.",
     position: "Senior Growth Engineer",
     company: "ManoMano",
     image: victor,
-    text: "Cyril nous a rejoint deux semaines pour automatiser un traitement de données CRM via Python/Airflow. En s'adaptant très rapidement à nos outils ainsi qu'à nos process, il a su délivrer chaque échelon du livrable dans les temps. Les décisions techniques furent par ailleurs facilitées par une communication fluide et agréable. C'est avec plaisir que nous retravaillerions avec Cyril."
+    text: "Cyril joined us for two weeks to automate CRM data processing via Python/Airflow. Adapting very quickly to our tools and processes, he delivered each stage of the deliverable on time. Technical decisions were also made easier thanks to smooth and pleasant communication. It will be a pleasure to work with Cyril again."
   }
 ];
 
 export const TestimonialsEN = () => {
+  const [api, setApi] = useState<CarouselApi | null>(null);
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    const snaps = api.scrollSnapList?.() ?? [];
+    setCount(snaps.length);
+    setCurrent(api.selectedScrollSnap());
+
+    const onSelect = () => setCurrent(api.selectedScrollSnap());
+    api.on("select", onSelect);
+  }, [api]);
+
   return (
       <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
@@ -75,11 +92,9 @@ export const TestimonialsEN = () => {
 
           <div className="relative">
             <Carousel
-                opts={{
-                  align: "start",
-                  loop: true,
-                }}
+                opts={{ align: "start", loop: true }}
                 className="w-full max-w-6xl mx-auto"
+                setApi={setApi}
             >
               <CarouselContent>
                 {testimonials.map((testimonial, index) => (
@@ -107,20 +122,29 @@ export const TestimonialsEN = () => {
                     </CarouselItem>
                 ))}
               </CarouselContent>
+
               <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-primary/10 text-primary-foreground hover:bg-primary/40 w-10 h-10 shadow-lg z-10" />
               <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-primary/10 text-primary-foreground hover:bg-primary/40 w-10 h-10 shadow-lg z-10" />
             </Carousel>
 
+            {/* Clickable indicators */}
             <div className="flex justify-center gap-2 mt-8">
-              {testimonials.map((_, index) => (
-                  <div
-                      key={index}
-                      className="w-2 h-2 rounded-full bg-primary/20 hover:bg-primary/50 transition-colors"
+              {Array.from({ length: count }).map((_, i) => (
+                  <button
+                      key={i}
+                      type="button"
+                      onClick={() => api?.scrollTo(i)}
+                      aria-label={`Go to page ${i + 1}`}
+                      className={[
+                        "h-2 rounded-full transition-all",
+                        i === current
+                            ? "w-6 bg-primary"
+                            : "w-2 bg-primary/30 hover:bg-primary/60",
+                      ].join(" ")}
                   />
               ))}
             </div>
           </div>
-
         </div>
       </section>
   );
