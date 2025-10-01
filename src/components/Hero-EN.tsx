@@ -54,14 +54,14 @@ export const HeroEN = () => {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Expert in generative AI, LLMs and Machine Learning with <strong>10+ years of experience</strong>. I transform your data into competitive advantages with tailor-made artificial intelligence solutions: RAG, fine-tuning, AI agents and data engineering.
+              Expert in generative AI, LLMs and Machine Learning with <strong>10 years of experience</strong>. I transform your data into competitive advantages with tailor-made artificial intelligence solutions: RAG, fine-tuning, AI agents and data engineering.
             </p>
 
             {/* Stats */}
             <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto" aria-label="Statistics and achievements">
               <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-md">
                 <div className="text-4xl font-bold text-primary mb-2" aria-label="More than 10 years">10+</div>
-                <div className="text-sm text-muted-foreground">Years of experience in Data Science & ML</div>
+                <div className="text-sm text-muted-foreground">Years of experience in Data</div>
               </div>
               <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-md">
                 <div className="text-4xl font-bold text-primary mb-2" aria-label="More than 15 clients">15+</div>

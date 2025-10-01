@@ -54,14 +54,14 @@ export const Hero = () => {
             </h2>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Expert en IA générative, <strong>LLM</strong>s et Machine Learning avec <strong>10+ ans d'expérience</strong>. Je transforme vos données en avantages compétitifs avec des solutions d'intelligence artificielle sur-mesure : RAG, fine-tuning, agents IA et data engineering.
+              Expert en IA générative, <strong>LLM</strong>s et Machine Learning avec <strong>10 ans d'expérience</strong>. Je transforme vos données en avantages compétitifs avec des solutions d'intelligence artificielle sur-mesure : RAG, fine-tuning, agents IA et data engineering.
             </p>
 
             {/* Stats */}
             <section className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-3xl mx-auto" aria-label="Statistiques et réalisations">
               <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-md">
                 <div className="text-4xl font-bold text-primary mb-2" aria-label="Plus de 10 années">10+</div>
-                <div className="text-sm text-muted-foreground">Années d'expérience en Data Science et ML</div>
+                <div className="text-sm text-muted-foreground">Années d'expérience en Data</div>
               </div>
               <div className="bg-card/50 backdrop-blur-sm rounded-2xl p-6 border border-border shadow-md">
                 <div className="text-4xl font-bold text-primary mb-2" aria-label="Plus de 15 clients">15+</div>
