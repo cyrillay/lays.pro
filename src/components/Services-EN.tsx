@@ -36,8 +36,8 @@ const services = [
   },
   {
     icon: Shield,
-    title: "AI Audit & Consulting",
-    description: "**Audit** of your existing systems, **strategic recommendations**, and **team training** on AI best practices."
+    title: "AI Training, Audit & Consulting",
+    description: "**Audit** of your existing systems, **strategic recommendations**, and **team training** on AI development and best practices."
   }
 ];
 

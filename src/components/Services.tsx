@@ -36,7 +36,7 @@ const services = [
   },
   {
     icon: Shield,
-    title: "Audit & Conseil IA",
+    title: "Formation, Audit & Conseil IA",
     description: "**Audit** de vos systèmes existants, **recommandations stratégiques** et **formation de vos équipes** aux meilleures pratiques d'IA."
   }
 ];
