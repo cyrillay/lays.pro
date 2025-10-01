@@ -96,7 +96,7 @@ export const ServicesEN = () => {
         </div>
 
         <div className="text-center">
-          <Link to="/en/skills">
+          <Link to="/en/skills" onClick={() => window.scrollTo(0, 0)}>
             <Button variant="outline" size="lg" className="group">
               Discover my skills
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

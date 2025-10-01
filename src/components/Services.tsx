@@ -96,7 +96,7 @@ export const Services = () => {
         </div>
 
         <div className="text-center">
-          <Link to="/skills">
+          <Link to="/skills" onClick={() => window.scrollTo(0, 0)}>
             <Button variant="outline" size="lg" className="group">
               Découvrir mes compétences
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />

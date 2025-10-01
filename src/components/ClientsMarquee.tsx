@@ -189,7 +189,10 @@ export const ClientsMarquee = () => {
           </div>
 
           <div className="text-center mt-12">
-            <Link to={isEnglish ? "/en/experiences" : "/experiences"}>
+            <Link
+                to={isEnglish ? "/en/experiences" : "/experiences"}
+                onClick={() => window.scrollTo(0, 0)}
+            >
               <Button variant="outline" size="lg" className="group">
                 {isEnglish
                     ? "Discover my latest projects"
