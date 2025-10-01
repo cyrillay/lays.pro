@@ -15,6 +15,11 @@ const services = [
     description: "Build intelligent AI systems that understand your **company data**. **RAG pipelines** connecting **LLMs** to your documents and **internal knowledge bases**."
   },
   {
+    icon: Shield,
+    title: "AI Training, Audit & Consulting",
+    description: "**Audit** of your existing systems, **strategic recommendations**, and **team training** on AI development and best practices."
+  },
+  {
     icon: Sparkles,
     title: "LLM Application Development",
     description: "**Production-ready** applications powered by the latest **LLMs**. **Automated customer support**, content generation, **intelligent assistants**."
@@ -33,11 +38,6 @@ const services = [
     icon: LineChart,
     title: "Data Mining & Analytics",
     description: "Extract **valuable insights** from your data. **Predictive models**, **trend analysis**, and **interactive visualizations**."
-  },
-  {
-    icon: Shield,
-    title: "AI Audit & Consulting",
-    description: "**Audit** of your existing systems, **strategic recommendations**, and **team training** on AI best practices."
   }
 ];
 

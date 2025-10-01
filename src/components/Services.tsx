@@ -15,6 +15,11 @@ const services = [
     description: "Création de systèmes IA intelligents qui comprennent vos **données d'entreprise**. **Pipelines RAG** connectant les **LLMs** à vos documents et toutes vos **sources internes**."
   },
   {
+    icon: Shield,
+    title: "Formation, Audit & Conseil IA",
+    description: "**Audit** de vos systèmes existants, **recommandations stratégiques** et **formation de vos équipes** aux meilleures pratiques d'IA."
+  },
+  {
     icon: Sparkles,
     title: "Développement d'applications utilisant les LLM",
     description: "Applications **prod-ready** alimentées par les derniers **LLMs** : LLama4, Mistral, etc. **Support client automatisé**, génération de contenu, **assistants intelligents**..."
@@ -33,11 +38,6 @@ const services = [
     icon: LineChart,
     title: "Data Mining & Analytics",
     description: "Extraction d'**insights précieux** de vos données. **Modèles prédictifs**, **analyse de tendances** et **visualisations interactives**."
-  },
-  {
-    icon: Shield,
-    title: "Audit & Conseil IA",
-    description: "**Audit** de vos systèmes existants, **recommandations stratégiques** et **formation de vos équipes** aux meilleures pratiques d'IA."
   }
 ];
 
