@@ -46,11 +46,11 @@ export const HeroEN = () => {
 
             {/* Title */}
             <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              Cyril LAY - AI & Machine Learning Expert
+              Cyril LAY - Senior AI Engineer
             </h1>
 
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground mb-4">
-              Senior Data & ML Engineer | GenAI & LLMs Consultant
+              GenAI Consultant | AI & Machine Learning Expert
             </h2>
 
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
