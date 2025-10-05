@@ -3,7 +3,7 @@ Professional website
 
 Deployment :
 
-- Push on master like the thug you are
+- Push on master like a thug
 - `npm run deploy` will deploy on `gh-pages` branch
 
 ## What technologies are used for this project?

@@ -8,6 +8,7 @@ import xbto from "@/assets/clients/xbto.png";
 import creditAgricole from "@/assets/clients/credit-agricole.png";
 import medissimo from "@/assets/clients/medissimo.png";
 import manomano from "@/assets/clients/manomano.png";
+import dinum from "@/assets/clients/dinum.png";
 import gumgum from "@/assets/clients/gumgum.png";
 import jedha from "@/assets/clients/jedha.png";
 import mytraffic from "@/assets/clients/mytraffic.png";
@@ -22,6 +23,7 @@ const clients = [
   { name: "GumGum", logo: gumgum },
   { name: "Crédit Agricole", logo: creditAgricole },
   { name: "ManoMano", logo: manomano },
+  { name: "DINUM", logo: dinum },
   { name: "MyTraffic", logo: mytraffic },
   { name: "Medissimo", logo: medissimo },
   { name: "Jedha", logo: jedha },
