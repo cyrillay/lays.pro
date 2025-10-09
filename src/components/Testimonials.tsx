@@ -11,6 +11,7 @@ import {
 import { useEffect, useState } from "react";
 
 import jonbaker from "@/assets/testimonials/jonbaker.jpeg";
+import jules from "@/assets/testimonials/jules.jpeg";
 import azam from "@/assets/testimonials/azam.jpeg";
 import antoine from "@/assets/testimonials/antoine.jpeg";
 import samuel from "@/assets/testimonials/samuel.png";
@@ -18,6 +19,14 @@ import alexandre from "@/assets/testimonials/alexandre.jpeg";
 import victor from "@/assets/testimonials/victor.jpeg";
 
 const testimonials = [
+  {
+    name: "Jules P.",
+    position: "Head of Product",
+    company: "Albert API",
+    image: jules,
+    text:
+        "Cyril est un excellent professionnel : fiable, rigoureux et très autonome. Recruté initialement dans mon équipe pour travailler sur la sécurisation d’Albert API - sur laquelle il a joué un rôle clé - Cyril a largement dépassé mes attentes. Il a contribué activement à plusieurs chantiers stratégiques : tests de charge, optimisation des coûts d’infrastructure et amélioration de l’inférence des modèles IA, pour n’en citer que quelques-uns. Véritable couteau suisse, Cyril livre avec aisance sur des sujets variés : data science, DevSecOps, développement backend ou encore la très recherchée expertise LLMOps. Il allie excellence technique, esprit d’équipe et forte initiative - un profil rare avec qui il est très agréable de travailler et que je recommande sans hésitation.",
+  },
   {
     name: "Jonathan B.",
     position: "COO",

@@ -16,8 +16,17 @@ import antoine from "@/assets/testimonials/antoine.jpeg";
 import samuel from "@/assets/testimonials/samuel.png";
 import alexandre from "@/assets/testimonials/alexandre.jpeg";
 import victor from "@/assets/testimonials/victor.jpeg";
+import jules from "@/assets/testimonials/jules.jpeg";
 
 const testimonials = [
+  {
+    name: "Jules P.",
+    position: "Head of Product",
+    company: "Albert API",
+    image: jules,
+    text:
+        "Cyril is an outstanding professional — reliable, meticulous, and highly autonomous. Initially recruited into my team to work on securing the Albert API — where he played a key role — Cyril has far exceeded my expectations. He actively contributed to several strategic projects, including load testing, infrastructure cost optimization, and improving AI model inference, to name just a few. A true Swiss Army knife, Cyril delivers with ease on a wide range of topics: data science, DevSecOps, backend development, and the highly sought-after LLMOps expertise. He combines technical excellence, teamwork, and strong initiative — a rare profile who is a real pleasure to work with and whom I recommend without hesitation.",
+  },
   {
     name: "Jonathan B.",
     position: "COO",

@@ -142,7 +142,7 @@ export const ClientsMarquee = () => {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-4 mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-2">
-            {isEnglish ? "They trusted me" : "Ils m'ont fait confiance"}
+            {isEnglish ? "They trust me" : "Ils me font confiance"}
           </h2>
           <p className="text-center text-muted-foreground">
             {isEnglish
