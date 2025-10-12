@@ -54,6 +54,7 @@ export const Navbar = () => {
       ? [
         { label: "Home", href: "hero", type: "scroll" },
         { label: "Services", href: "services", type: "scroll" },
+        { label: "Trainings", href: "/en/trainings", type: "link" },
         { label: "Skills", href: "/en/skills", type: "link" },
         { label: "Projects", href: "/en/experiences", type: "link" },
         { label: "Blog", href: "https://blog.lays.pro/", type: "external" },
@@ -62,6 +63,7 @@ export const Navbar = () => {
       : [
         { label: "Accueil", href: "hero", type: "scroll" },
         { label: "Services", href: "services", type: "scroll" },
+        { label: "Formations", href: "/trainings", type: "link" },
         { label: "Compétences", href: "/skills", type: "link" },
         { label: "Projets", href: "/experiences", type: "link" },
         { label: "Blog", href: "https://blog.lays.pro/", type: "external" },
