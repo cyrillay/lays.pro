@@ -7,7 +7,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TrainingPreview } from "@/components/TrainingPreview";
+import { TrainingsPreview } from "@/components/TrainingsPreview.tsx";
 
 const trainingHighlights = [
     {
@@ -197,10 +197,6 @@ export const Trainings = () => {
                             <p>
                                 Vous mettrez en pratique les notions étudiées dans des cas concrets : utilisation des modèles et fonctions par API, développement d'application RAG, intégration dans des applications existantes, fine-tuning de modèles.
                             </p>
-
-                            <p>
-                                Votre formateur, <strong>Cyril LAY</strong>, est un ingénieur curieux et passionné qui met en relation les notions étudiées avec son expérience professionnelle dans le domaine, permettant aux apprenant·e·s de transposer leurs nouvelles compétences dans leur entreprise.
-                            </p>
                         </div>
                     </div>
                 </div>
@@ -226,7 +222,7 @@ export const Trainings = () => {
                 </div>
             </section>
 
-            <TrainingPreview />
+            <TrainingsPreview />
 
             {/* Program Details */}
             <section className="py-16 bg-muted/30">

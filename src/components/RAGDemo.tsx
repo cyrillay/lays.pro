@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export const RAGDemo = () => {
+    const isEnglish = window.location.pathname.startsWith('/en');
+
     const [file, setFile] = useState<File | null>(null);
     const [uploading, setUploading] = useState(false);
     const [uploaded, setUploaded] = useState(false);
@@ -18,7 +20,7 @@ export const RAGDemo = () => {
         const selectedFile = e.target.files?.[0];
         if (selectedFile) {
             if (selectedFile.size > 5 * 1024 * 1024) {
-                setError('Le fichier doit faire moins de 5 MB');
+                setError(isEnglish ? 'File must be less than 5 MB' : 'Le fichier doit faire moins de 5 MB');
                 return;
             }
             setFile(selectedFile);
@@ -46,7 +48,9 @@ export const RAGDemo = () => {
 
             setUploaded(true);
         } catch (err) {
-            setError('Erreur lors de l\'upload. Assurez-vous que le backend est lancé.');
+            setError(isEnglish
+                ? 'Upload error. Make sure the backend is running.'
+                : 'Erreur lors de l\'upload. Assurez-vous que le backend est lancé.');
             console.error(err);
         } finally {
             setUploading(false);
@@ -74,7 +78,9 @@ export const RAGDemo = () => {
             const data = await response.json();
             setAnswer(data.answer);
         } catch (err) {
-            setError('Erreur lors de la requête. Vérifiez votre backend.');
+            setError(isEnglish
+                ? 'Query error. Check your backend.'
+                : 'Erreur lors de la requête. Vérifiez votre backend.');
             console.error(err);
         } finally {
             setLoading(false);
@@ -88,11 +94,13 @@ export const RAGDemo = () => {
                     <div className="inline-flex items-center gap-2 mb-4">
                         <Sparkles className="w-8 h-8 text-primary" />
                         <h2 className="text-4xl md:text-5xl font-bold">
-                            Démo RAG Interactive
+                            {isEnglish ? 'Interactive RAG Demo' : 'Démo RAG Interactive'}
                         </h2>
                     </div>
                     <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                        Testez la puissance d'un système RAG en temps réel : uploadez un document et posez-lui des questions
+                        {isEnglish
+                            ? 'Test the power of a RAG system in real-time: upload a document and ask it questions'
+                            : 'Testez la puissance d\'un système RAG en temps réel : uploadez un document et posez-lui des questions'}
                     </p>
                 </div>
 
@@ -120,10 +128,10 @@ export const RAGDemo = () => {
                                         <div onClick={() => fileInputRef.current?.click()} className="cursor-pointer">
                                             <Upload className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
                                             <p className="text-lg font-semibold mb-2">
-                                                Cliquez pour choisir un fichier
+                                                {isEnglish ? 'Click to choose a file' : 'Cliquez pour choisir un fichier'}
                                             </p>
                                             <p className="text-sm text-muted-foreground">
-                                                .pdf (max 5 MB)
+                                                .pdf {isEnglish ? '(max 5 MB)' : '(max 5 MB)'}
                                             </p>
                                         </div>
                                     ) : (
@@ -143,12 +151,12 @@ export const RAGDemo = () => {
                                                     {uploading ? (
                                                         <>
                                                             <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                                                            Upload en cours...
+                                                            {isEnglish ? 'Uploading...' : 'Upload en cours...'}
                                                         </>
                                                     ) : (
                                                         <>
                                                             <Upload className="mr-2 h-4 w-4" />
-                                                            Charger le document
+                                                            {isEnglish ? 'Load document' : 'Charger le document'}
                                                         </>
                                                     )}
                                                 </Button>
@@ -156,7 +164,7 @@ export const RAGDemo = () => {
                                                     onClick={() => setFile(null)}
                                                     variant="outline"
                                                 >
-                                                    Annuler
+                                                    {isEnglish ? 'Cancel' : 'Annuler'}
                                                 </Button>
                                             </div>
                                         </div>
@@ -169,17 +177,17 @@ export const RAGDemo = () => {
                                     <div className="flex items-center gap-3">
                                         <FileText className="w-5 h-5 text-primary" />
                                         <span className="font-semibold">
-                      {file?.name}
-                    </span>
+                                            {file?.name}
+                                        </span>
                                         <span className="text-sm text-muted-foreground">
-                      ✓ Chargé
-                    </span>
+                                            ✓ {isEnglish ? 'Loaded' : 'Chargé'}
+                                        </span>
                                     </div>
                                 </div>
 
                                 <div className="p-8">
                                     <label className="block text-sm font-semibold mb-3">
-                                        Posez votre question
+                                        {isEnglish ? 'Ask your question' : 'Posez votre question'}
                                     </label>
                                     <div className="flex gap-3">
                                         <input
@@ -187,7 +195,9 @@ export const RAGDemo = () => {
                                             value={question}
                                             onChange={(e) => setQuestion(e.target.value)}
                                             onKeyPress={(e) => e.key === 'Enter' && handleAsk()}
-                                            placeholder="Ex: Quels sont les points principaux de ce document ?"
+                                            placeholder={isEnglish
+                                                ? 'E.g.: What are the main points of this document?'
+                                                : 'Ex: Quels sont les points principaux de ce document ?'}
                                             className="flex-1 px-4 py-3 rounded-lg border border-input bg-background focus:ring-2 focus:ring-ring focus:border-transparent outline-none"
                                             disabled={loading}
                                         />
@@ -209,7 +219,7 @@ export const RAGDemo = () => {
                                                 <Sparkles className="w-5 h-5 text-primary mt-1 flex-shrink-0" />
                                                 <div className="flex-1">
                                                     <p className="text-sm font-semibold mb-2">
-                                                        Réponse
+                                                        {isEnglish ? 'Answer' : 'Réponse'}
                                                     </p>
                                                     <p className="text-muted-foreground leading-relaxed whitespace-pre-wrap">
                                                         {answer}
@@ -231,7 +241,7 @@ export const RAGDemo = () => {
                                         variant="outline"
                                         size="sm"
                                     >
-                                        Charger un nouveau document
+                                        {isEnglish ? 'Load a new document' : 'Charger un nouveau document'}
                                     </Button>
                                 </div>
                             </div>
@@ -239,7 +249,11 @@ export const RAGDemo = () => {
                     </div>
 
                     <div className="mt-8 text-center text-sm text-muted-foreground">
-                        <p>💡 Cette démo utilise un système RAG pour répondre à vos questions basé uniquement sur le contenu de votre document</p>
+                        <p>
+                            💡 {isEnglish
+                            ? 'This demo uses a RAG system to answer your questions based on your document content'
+                            : 'Cette démo utilise un système RAG pour répondre à vos questions sur la base du contenu de votre document'}
+                        </p>
                     </div>
                 </div>
             </div>
