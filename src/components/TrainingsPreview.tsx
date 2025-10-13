@@ -5,13 +5,27 @@ import pretrainingSlide from "@/assets/trainings/pretraining.png";
 import fewshotSlide from "@/assets/trainings/prompting.png";
 import ragSlide from "@/assets/trainings/rag-architecture.png";
 import cyrilFormation from "@/assets/experiences/cyrilformation.png";
+import mcpSlide1 from "@/assets/trainings/mcp-1.png";
+import mcpSlide2 from "@/assets/trainings/mcp-2.png";
 
 const slides = [
+    {
+        title: "MCP - Model Context Protocol",
+        description: "Comment connecter des IA à n'importe quelle application",
+        image: mcpSlide1,
+        alt: "slide explaining MCP"
+    },
     {
         title: "Création d'un LLM - Le pre-training",
         description: "Comprendre comment les modèles sont entraînés et prédisent le token suivant",
         image: pretrainingSlide,
         alt: "Slide expliquant le pre-training des LLMs avec exemple de tokenization"
+    },
+    {
+        title: "MCP - Model Context Protocol",
+        description: "Comment connecter des IA à n'importe quelle application",
+        image: mcpSlide2,
+        alt: "slide explaining MCP"
     },
     {
         title: "Prompt Engineering",

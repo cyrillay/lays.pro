@@ -4,14 +4,28 @@ import { Button } from "@/components/ui/button";
 import pretrainingSlide from "@/assets/trainings/pretraining.png";
 import fewshotSlide from "@/assets/trainings/prompting.png";
 import ragSlide from "@/assets/trainings/rag-architecture.png";
+import mcpSlide1 from "@/assets/trainings/mcp-1.png";
+import mcpSlide2 from "@/assets/trainings/mcp-2.png";
 import cyrilFormation from "@/assets/experiences/cyrilformation.png";
 
 const slides = [
+    {
+        title: "MCP - Model Context Protocol",
+        description: "How to connect LLMs to any application",
+        image: mcpSlide1,
+        alt: "slide explaining MCP"
+    },
     {
         title: "Building an LLM - pre-training fundamentals",
         description: "Understand how large language models are trained and how they predict the next token",
         image: pretrainingSlide,
         alt: "slide explaining LLM pre-training with tokenization example"
+    },
+    {
+        title: "MCP - Model Context Protocol",
+        description: "How to connect LLMs to any application",
+        image: mcpSlide2,
+        alt: "slide explaining MCP"
     },
     {
         title: "Prompt engineering techniques",

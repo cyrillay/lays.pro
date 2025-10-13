@@ -1,11 +1,12 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Database, Brain, Cog, Sparkles } from "lucide-react";
-import { Card, CardContent } from "@/components/ui/card";
+import { Card } from "@/components/ui/card";
 
 // LLM & GenAI Engineering
 import hfLogo from "@/assets/skills/hf_logo.png";
 import vllmLogo from "@/assets/skills/vllm.png";
+import mcpLogo from "@/assets/skills/mcp.png";
 import langchainLogo from "@/assets/skills/langchain.jpg";
 import mlflowLogo from "@/assets/skills/mlflow.svg";
 import sagemakerLogo from "@/assets/skills/sagemaker_logo.png";
@@ -48,11 +49,13 @@ const skillCategories = [
       "🧩 Concevoir, architecturer et déployer des applications LLM end-to-end et des systèmes RAG",
       "📈 Booster la productivité de vos data scientists avec des outils MLOps/LLMOps",
       "⚡️ Optimiser les performances d'inférence avec la quantization de modèles et un serving efficace",
+      "⚙️ Développer des MCP servers pour vos outils",
       "🎯 Fine-tuner et adapter les modèles foundation à votre domaine et cas d'usage spécifiques"
     ],
     frameworks: [
       { name: "Hugging Face", logo: hfLogo },
       { name: "vLLM", logo: vllmLogo },
+      { name: "MCP", logo: mcpLogo },
       { name: "LangChain", logo: langchainLogo },
       { name: "MLflow", logo: mlflowLogo },
       { name: "AWS Sagemaker", logo: sagemakerLogo },

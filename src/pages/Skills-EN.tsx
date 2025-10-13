@@ -8,6 +8,7 @@ import hfLogo from "@/assets/skills/hf_logo.png";
 import vllmLogo from "@/assets/skills/vllm.png";
 import langchainLogo from "@/assets/skills/langchain.jpg";
 import mlflowLogo from "@/assets/skills/mlflow.svg";
+import mcpLogo from "@/assets/skills/mcp.png";
 import sagemakerLogo from "@/assets/skills/sagemaker_logo.png";
 import dockerLogo from "@/assets/skills/docker.svg";
 
@@ -48,11 +49,13 @@ const skillCategories = [
       "🧩 Design, architect and deploy end-to-end LLM applications and RAG systems",
       "📈 Boost your data scientists' productivity with MLOps/LLMOps tools",
       "⚡️ Optimize inference performance with model quantization and efficient serving",
+      "⚙️ Develop MCP servers for your apps",
       "🎯 Fine-tune and adapt foundation models to your specific domain and use cases"
     ],
     frameworks: [
       { name: "Hugging Face", logo: hfLogo },
       { name: "vLLM", logo: vllmLogo },
+      { name: "MCP", logo: mcpLogo },
       { name: "LangChain", logo: langchainLogo },
       { name: "MLflow", logo: mlflowLogo },
       { name: "AWS Sagemaker", logo: sagemakerLogo },
