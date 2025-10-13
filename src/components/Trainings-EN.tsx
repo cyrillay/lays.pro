@@ -7,7 +7,7 @@ import {
     AccordionItem,
     AccordionTrigger,
 } from "@/components/ui/accordion";
-import { TrainingPreviewEN } from "@/components/TrainingsPreview-EN";
+import { TrainingsPreviewEN } from "@/components/TrainingsPreview-EN";
 
 const trainingHighlights = [
     {
@@ -27,7 +27,7 @@ const trainingHighlights = [
     },
     {
         icon: EuroIcon,
-        title: "Custom Quote",
+        title: "Custom quote",
         description: "Tailored pricing based on your needs and team size"
     }
 ];
@@ -226,7 +226,7 @@ export const TrainingsEN = () => {
                 </div>
             </section>
 
-            <TrainingPreviewEN />
+            <TrainingsPreviewEN />
 
             {/* Program Details */}
             <section className="py-16 bg-muted/30">

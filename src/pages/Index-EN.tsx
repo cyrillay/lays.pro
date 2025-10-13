@@ -5,6 +5,7 @@ import { ServicesEN } from "@/components/Services-EN";
 import { TestimonialsEN } from "@/components/Testimonials-EN";
 import { ContactEN } from "@/components/Contact-EN";
 import { Footer } from "@/components/Footer";
+import {RAGDemo} from "@/components/RAGDemo.tsx";
 
 const IndexEN = () => {
   return (
@@ -18,6 +19,9 @@ const IndexEN = () => {
         <div id="services">
           <ServicesEN />
         </div>
+      <div id="ragdemo">
+          <RAGDemo />
+      </div>
         <TestimonialsEN />
         <ContactEN />
       </main>

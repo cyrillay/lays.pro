@@ -38,14 +38,14 @@ All colors MUST be HSL.
     --ring: 217 91% 35%;
 
     --radius: 0.75rem;
-    
+
     --gradient-hero: linear-gradient(135deg, hsl(217 91% 35%), hsl(200 85% 45%));
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(220 14% 98%));
     --shadow-soft: 0 4px 6px -1px hsl(220 9% 46% / 0.1), 0 2px 4px -1px hsl(220 9% 46% / 0.06);
     --shadow-medium: 0 10px 15px -3px hsl(220 9% 46% / 0.1), 0 4px 6px -2px hsl(220 9% 46% / 0.05);
     --shadow-large: 0 20px 25px -5px hsl(220 9% 46% / 0.1), 0 10px 10px -5px hsl(220 9% 46% / 0.04);
     --shadow-glow: 0 0 40px hsl(217 91% 35% / 0.3);
-    
+
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 
     --sidebar-background: 0 0% 98%;

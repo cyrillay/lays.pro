@@ -8,44 +8,44 @@ import cyrilFormation from "@/assets/experiences/cyrilformation.png";
 
 const slides = [
     {
-        title: "Building an LLM - pre-training fundamentals",
-        description: "Understand how large language models are trained and how they predict the next token",
+        title: "Création d'un LLM - Le pre-training",
+        description: "Comprendre comment les modèles sont entraînés et prédisent le token suivant",
         image: pretrainingSlide,
-        alt: "slide explaining LLM pre-training with tokenization example"
+        alt: "Slide expliquant le pre-training des LLMs avec exemple de tokenization"
     },
     {
-        title: "Prompt engineering techniques",
-        description: "Write better prompts, get better responses",
+        title: "Prompt Engineering",
+        description: "7 techniques de prompting pour améliorer les réponses des LLMs avec des exemples",
         image: fewshotSlide,
-        alt: "comparison chart of 0-shot, 1-shot and few-shot prompting techniques"
+        alt: "Tableau comparatif des techniques 0-shot, 1-shot et few-shot prompting"
     },
     {
-        title: "RAG architecture overview",
-        description: "Design and implement a RAG system with embedding, vector database and reranking",
+        title: "Architecture RAG",
+        description: "Concevez et implémentez un système RAG avec embedding, base vectorielle et reranking",
         image: ragSlide,
-        alt: "architecture diagram of a RAG system with LlamaIndex"
+        alt: "Diagramme d'architecture d'un système RAG avec LlamaIndex"
     }
 ];
 
-export const TrainingsPreviewEN = () => {
+export const TrainingsPreview = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
 
     const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % slides.length);
     const previousSlide = () => setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
 
     return (
-        <section className="py-12" aria-label="training program preview">
+        <section className="py-12">
             <div className="container mx-auto px-4 max-w-6xl">
                 <div className="text-center mb-8">
                     <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-3">
                         <Presentation className="w-4 h-4" />
-                        Training preview
+                        Aperçu de la formation
                     </div>
                     <h2 className="text-2xl md:text-3xl font-bold mb-2">
-                        Discover the training content
+                        Découvrez le contenu de la formation
                     </h2>
                     <p className="text-muted-foreground">
-                        Sample slides and concepts covered in the course
+                        Exemples de slides et concepts abordés
                     </p>
                 </div>
 
@@ -56,18 +56,18 @@ export const TrainingsPreviewEN = () => {
                             <div className="w-full">
                                 <img
                                     src={cyrilFormation}
-                                    alt="Cyril teaching an LLM training course"
+                                    alt="Cyril donnant une formation sur les LLMs"
                                     className="w-full h-auto rounded-lg shadow-md"
                                 />
                             </div>
                             <div className="mt-4 space-y-4">
                                 <div className="text-center space-y-3">
                                     <h3 className="text-lg font-bold text-foreground">
-                                        LLM training programs
+                                        Formations sur les LLMs
                                     </h3>
                                     <div className="w-16 h-0.5 bg-primary/30 mx-auto"></div>
                                     <p className="text-sm text-muted-foreground leading-relaxed">
-                                        Your instructor, <strong>Cyril LAY</strong>, is a curious and passionate engineer who connects theoretical concepts with real-world professional experience in the field, enabling learners to apply their new skills in their own companies.
+                                        Votre formateur, <strong>Cyril LAY</strong>, est un ingénieur curieux et passionné qui met en relation les notions étudiées avec son expérience professionnelle dans le domaine, permettant aux apprenant·e·s de transposer leurs nouvelles compétences dans leur entreprise.
                                     </p>
                                 </div>
                                 <div className="flex flex-wrap justify-center gap-2 pt-2">
@@ -106,7 +106,6 @@ export const TrainingsPreviewEN = () => {
                                             size="icon"
                                             onClick={previousSlide}
                                             className="bg-background/95 backdrop-blur-sm shadow-lg"
-                                            aria-label="previous slide"
                                         >
                                             <ChevronLeft className="h-5 w-5" />
                                         </Button>
@@ -115,7 +114,6 @@ export const TrainingsPreviewEN = () => {
                                             size="icon"
                                             onClick={nextSlide}
                                             className="bg-background/95 backdrop-blur-sm shadow-lg"
-                                            aria-label="next slide"
                                         >
                                             <ChevronRight className="h-5 w-5" />
                                         </Button>
@@ -131,7 +129,7 @@ export const TrainingsPreviewEN = () => {
                                     </p>
                                 </div>
 
-                                <div className="flex justify-center gap-2 mt-6" role="tablist" aria-label="slide navigation">
+                                <div className="flex justify-center gap-2 mt-6">
                                     {slides.map((_, index) => (
                                         <button
                                             key={index}
@@ -141,9 +139,7 @@ export const TrainingsPreviewEN = () => {
                                                     ? "w-8 bg-primary"
                                                     : "w-2 bg-muted-foreground/30 hover:bg-muted-foreground/50"
                                             }`}
-                                            role="tab"
-                                            aria-selected={index === currentSlide}
-                                            aria-label={`go to slide ${index + 1}`}
+                                            aria-label={`Aller au slide ${index + 1}`}
                                         />
                                     ))}
                                 </div>
