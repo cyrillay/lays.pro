@@ -14,12 +14,14 @@ import jedha from "@/assets/clients/jedha.png";
 import mytraffic from "@/assets/clients/mytraffic.png";
 import simudyne from "@/assets/clients/simudyne.png";
 import ubisoft from "@/assets/clients/ubisoft.svg";
+import imf from "@/assets/clients/imf.png";
 
 const clients = [
   { name: "Simudyne", logo: simudyne },
   { name: "Air Liquide", logo: airLiquide },
   { name: "XBTO", logo: xbto },
   { name: "Ubisoft", logo: ubisoft },
+  { name: "IMF", logo: imf },
   { name: "GumGum", logo: gumgum },
   { name: "Crédit Agricole", logo: creditAgricole },
   { name: "ManoMano", logo: manomano },
