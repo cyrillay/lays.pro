@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -99,12 +99,16 @@ const ExperiencesEN = () => {
 
     return (
         <div className="min-h-screen">
-            <Helmet>
+            <Head>
                 <html lang="en" />
                 <title>Experiences & Projects | Cyril LAY – GenAI Consultant</title>
                 <meta name="description" content="Projects by Cyril LAY: OpenGateLLM (Etalab), MLOps platform (ManoMano), Big Data pipelines (GumGum), pedestrian traffic insights (MyTraffic) and more." />
                 <link rel="canonical" href="https://www.lays.pro/en/experiences" />
-            </Helmet>
+                <meta property="og:title" content="Experiences & Projects | Cyril LAY – GenAI Consultant" />
+                <meta property="og:description" content="Projects by Cyril LAY: OpenGateLLM (Etalab), MLOps platform (ManoMano), Big Data pipelines (GumGum), pedestrian traffic insights (MyTraffic) and more." />
+                <meta property="og:url" content="https://www.lays.pro/en/experiences" />
+                <meta property="og:locale" content="en_US" />
+              </Head>
             <Navbar />
             <main className="pt-20">
                 <section className="py-24 bg-gradient-to-b from-primary/5 to-background">

@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Head } from "vite-react-ssg";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Database, Brain, Cog, Sparkles } from "lucide-react";
@@ -123,12 +123,16 @@ const skillCategories = [
 const SkillsEN = () => {
   return (
     <div className="min-h-screen">
-      <Helmet>
+      <Head>
         <html lang="en" />
         <title>Skills | Cyril LAY – LLM, GenAI, Data Engineering</title>
         <meta name="description" content="Cyril LAY's skills: LLM & GenAI Engineering, Data Engineering, Machine Learning, MLOps. Expert in Python, Spark, AWS, LangChain, Hugging Face." />
         <link rel="canonical" href="https://www.lays.pro/en/skills" />
-      </Helmet>
+        <meta property="og:title" content="Skills | Cyril LAY – LLM, GenAI, Data Engineering" />
+        <meta property="og:description" content="Cyril LAY's skills: LLM & GenAI Engineering, Data Engineering, Machine Learning, MLOps. Expert in Python, Spark, AWS, LangChain, Hugging Face." />
+        <meta property="og:url" content="https://www.lays.pro/en/skills" />
+        <meta property="og:locale" content="en_US" />
+      </Head>
       <Navbar />
       <main className="pt-20">
         <section className="py-24 bg-gradient-to-b from-primary/5 to-background">
