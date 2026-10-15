@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Database, Brain, Cog, Sparkles } from "lucide-react";
@@ -122,6 +123,12 @@ const skillCategories = [
 const Skills = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <html lang="fr" />
+        <title>Compétences | Cyril LAY – LLM, GenAI, Data Engineering</title>
+        <meta name="description" content="Compétences de Cyril LAY : LLM & GenAI Engineering, Data Engineering, Machine Learning, MLOps. Experts en Python, Spark, AWS, LangChain, Hugging Face." />
+        <link rel="canonical" href="https://www.lays.pro/skills" />
+      </Helmet>
       <Navbar />
       <main className="pt-20">
         <section className="py-24 bg-gradient-to-b from-primary/5 to-background">

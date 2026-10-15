@@ -185,6 +185,7 @@ export const ClientsMarquee = () => {
                             alt={`Logo ${client.name}`}
                             className="h-24 w-auto object-contain hover:scale-110 transition-transform pointer-events-none"
                             draggable="false"
+                            loading="lazy"
                         />
                       </div>
                   ))}

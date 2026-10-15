@@ -3,7 +3,7 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://www.lays.pro/</loc>
-    <lastmod>2025-09-30</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en"/>
@@ -11,7 +11,7 @@
   </url>
   <url>
     <loc>https://www.lays.pro/en</loc>
-    <lastmod>2025-09-30</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en"/>
@@ -19,7 +19,7 @@
   </url>
   <url>
     <loc>https://www.lays.pro/skills</loc>
-    <lastmod>2025-09-30</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/skills"/>
@@ -27,10 +27,42 @@
   </url>
   <url>
     <loc>https://www.lays.pro/en/skills</loc>
-    <lastmod>2025-09-30</lastmod>
+    <lastmod>2026-06-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/skills"/>
     <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/skills"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/experiences</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/experiences"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/experiences"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/en/experiences</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/experiences"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/experiences"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/trainings</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/trainings"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/trainings"/>
+  </url>
+  <url>
+    <loc>https://www.lays.pro/en/trainings</loc>
+    <lastmod>2026-06-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.lays.pro/en/trainings"/>
+    <xhtml:link rel="alternate" hreflang="fr" href="https://www.lays.pro/trainings"/>
   </url>
 </urlset>

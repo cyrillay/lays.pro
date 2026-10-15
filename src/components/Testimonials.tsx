@@ -127,6 +127,7 @@ export const Testimonials = () => {
                                 src={testimonial.image}
                                 alt={testimonial.name}
                                 className="w-16 h-16 rounded-full object-cover border-2 border-primary/20"
+                                loading="lazy"
                             />
                             <div>
                               <h3 className="font-bold text-lg">

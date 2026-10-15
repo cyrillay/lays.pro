@@ -36,7 +36,6 @@ export const ContactEN = () => {
           'user_8lWdMVJ8JBqkAbfW5nP9i'
       );
 
-      console.log('Email sent successfully:', result.text);
       alert("Message sent! I'll get back to you soon.");
 
       setFormData({
@@ -152,9 +151,11 @@ export const ContactEN = () => {
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       <option value="" disabled>Select an option</option>
+                      <option value="GenAI / LLM / AI Agents">GenAI / LLM / AI Agents consulting</option>
                       <option value="ML Engineering services">ML Engineering services</option>
                       <option value="Data engineering services">Data engineering services</option>
                       <option value="Data science services">Data science services</option>
+                      <option value="LLM & RAG Training">LLM & RAG Training</option>
                       <option value="Other">Other</option>
                     </select>
                   </div>

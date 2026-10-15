@@ -45,8 +45,6 @@ export const Contact = () => {
           'user_8lWdMVJ8JBqkAbfW5nP9i'     // Replace with your public key
       );
 
-      console.log('Email sent successfully:', result.text);
-
       toast({
         title: "Message envoyé !",
         description: "Je reviendrai vers vous dans les plus brefs délais.",
@@ -174,9 +172,11 @@ export const Contact = () => {
                         className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       <option value="" disabled>Sélectionnez une option</option>
+                      <option value="GenAI / LLM / Agents IA">Consulting GenAI / LLM / Agents IA</option>
                       <option value="ML Engineering services">Services ML Engineering</option>
                       <option value="Data engineering services">Services Data engineering</option>
                       <option value="Data science services">Services Data science</option>
+                      <option value="Formations LLM & RAG">Formations LLM & RAG</option>
                       <option value="Other">Autre</option>
                     </select>
                   </div>

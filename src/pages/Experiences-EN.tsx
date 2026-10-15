@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
@@ -16,8 +17,6 @@ import footfallYear from "@/assets/experiences/footfall-year.png";
 import gumgumPipeline from "@/assets/experiences/gumgum-pipeline.png";
 import cruiseControl from "@/assets/experiences/cruise-control.jpg";
 import gumgumForecasting from "@/assets/experiences/gumgum-forecasting.png";
-import inferenceApiScreenshot from "@/assets/experiences/inference-api-screenshot.png";
-
 const experiences = [
     {
         title: "OpenGateLLM - Sovereign GenAI Solution",
@@ -100,6 +99,12 @@ const ExperiencesEN = () => {
 
     return (
         <div className="min-h-screen">
+            <Helmet>
+                <html lang="en" />
+                <title>Experiences & Projects | Cyril LAY – GenAI Consultant</title>
+                <meta name="description" content="Projects by Cyril LAY: OpenGateLLM (Etalab), MLOps platform (ManoMano), Big Data pipelines (GumGum), pedestrian traffic insights (MyTraffic) and more." />
+                <link rel="canonical" href="https://www.lays.pro/en/experiences" />
+            </Helmet>
             <Navbar />
             <main className="pt-20">
                 <section className="py-24 bg-gradient-to-b from-primary/5 to-background">
@@ -173,6 +178,7 @@ const ExperiencesEN = () => {
                                                 alt={experience.title}
                                                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
                                                 style={experience.backgroundColor ? { backgroundColor: experience.backgroundColor } : {}}
+                                                loading="lazy"
                                             />
                                         </div>
                                     )}
