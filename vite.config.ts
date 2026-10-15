@@ -15,4 +15,9 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Génère /foo/index.html plutôt que /foo.html : servi correctement
+  // par n'importe quel hébergeur statique, GitHub Pages compris.
+  ssgOptions: {
+    dirStyle: "nested",
+  },
 }));

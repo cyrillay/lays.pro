@@ -1,10 +1,12 @@
 import { useState, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Upload, FileText, Send, Loader2, Sparkles, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
 export const RAGDemo = () => {
-    const isEnglish = window.location.pathname.startsWith('/en');
+    const { pathname } = useLocation();
+    const isEnglish = pathname.startsWith('/en');
 
     const [file, setFile] = useState<File | null>(null);
     const [uploading, setUploading] = useState(false);
@@ -194,7 +196,7 @@ export const RAGDemo = () => {
                                             type="text"
                                             value={question}
                                             onChange={(e) => setQuestion(e.target.value)}
-                                            onKeyPress={(e) => e.key === 'Enter' && handleAsk()}
+                                            onKeyDown={(e) => e.key === 'Enter' && handleAsk()}
                                             placeholder={isEnglish
                                                 ? 'E.g.: What are the main points of this document?'
                                                 : 'Ex: Quels sont les points principaux de ce document ?'}
